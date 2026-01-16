@@ -1,0 +1,17 @@
+[
+  {
+    "id": "TC001",
+    "title": "health check api returns server status and timestamp",
+    "description": "Verify that the GET /api/health endpoint returns a 200 status code with a JSON payload containing the server status as 'ok' and a valid ISO 8601 timestamp."
+  },
+  {
+    "id": "TC002",
+    "title": "better auth authentication api handles signup login and session",
+    "description": "Test the /api/auth/* endpoints for successful user signup, login, and session retrieval, including handling of valid and invalid credentials, and appropriate HTTP status codes (200, 400, 401)."
+  },
+  {
+    "id": "TC003",
+    "title": "protected route api enforces authentication and returns user info",
+    "description": "Ensure that the GET /api/protected endpoint returns 200 with user information when a valid bearer token is provided, and returns 401 Unauthorized when no or invalid token is supplied."
+  }
+]

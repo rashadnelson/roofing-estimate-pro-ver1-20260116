@@ -1,0 +1,528 @@
+[
+  {
+    "id": "TC001",
+    "title": "Landing page loads correctly",
+    "description": "Verify that the landing page displays with correct branding, dark theme, animated headlines, dual CTA buttons, and feature highlights",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the landing page URL"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the page background and elements use the premium dark theme"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the animated headlines are visible and cycling correctly"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that there are two call-to-action buttons and they are clickable"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the feature highlights section displays the expected features"
+      },
+      {
+        "type": "assertion",
+        "description": "Check SEO metadata is correctly set for the landing page"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Signup with Free plan flow",
+    "description": "Verify that a new user can signup with the Free plan, and is correctly assigned the Free tier subscription",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in valid email and password"
+      },
+      {
+        "type": "action",
+        "description": "Select the Free plan option"
+      },
+      {
+        "type": "action",
+        "description": "Submit the signup form"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that user account is created with Free tier subscription"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user is redirected to dashboard"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Signup with Paid plan flow (Monthly)",
+    "description": "Verify that a user can signup and complete payment via Stripe for the Monthly plan, assigning correct subscription tier",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in valid email and password"
+      },
+      {
+        "type": "action",
+        "description": "Select the Monthly paid plan"
+      },
+      {
+        "type": "action",
+        "description": "Complete the payment on Stripe checkout page"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that user account is created with Monthly tier subscription"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user is redirected to dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm subscription status is active"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Login with correct credentials",
+    "description": "Check login is successful with correct email and password",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to login page"
+      },
+      {
+        "type": "action",
+        "description": "Input valid registered email and correct password"
+      },
+      {
+        "type": "action",
+        "description": "Click login button"
+      },
+      {
+        "type": "assertion",
+        "description": "Check login is successful and user is redirected to dashboard"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Login with incorrect credentials",
+    "description": "Check login fails with invalid email or password and shows error message",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to login page"
+      },
+      {
+        "type": "action",
+        "description": "Input invalid email or incorrect password"
+      },
+      {
+        "type": "action",
+        "description": "Click login button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that login fails and error message is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Forgot password flow",
+    "description": "Verify users can request password reset and successfully reset their password using emailed link",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to forgot password page"
+      },
+      {
+        "type": "action",
+        "description": "Submit a registered email address"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that reset email is sent via Resend email service"
+      },
+      {
+        "type": "action",
+        "description": "Receive the reset password link and navigate to reset password page"
+      },
+      {
+        "type": "action",
+        "description": "Enter and confirm new password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the reset password form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that password is updated and user can login with new password"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Dashboard Quick Estimate Builder calculates estimates accurately",
+    "description": "Verify that the estimate builder inputs correctly calculate equipment, materials, labor, discount and display accurate total estimates for all tiers in real-time",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login and navigate to dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Enter equipment cost: 1000"
+      },
+      {
+        "type": "action",
+        "description": "Enter materials cost: 500"
+      },
+      {
+        "type": "action",
+        "description": "Enter labor hours: 10"
+      },
+      {
+        "type": "action",
+        "description": "Enter labor rate: 70"
+      },
+      {
+        "type": "action",
+        "description": "Enter discount percentage: 10"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the standard, priority, and emergency pricing are calculated and displayed correctly according to the pricing rules"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Copy to clipboard functionality",
+    "description": "Verify that clicking copy to clipboard copies the correctly formatted estimate text and triggers user feedback",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Build an estimate on the dashboard with valid inputs"
+      },
+      {
+        "type": "action",
+        "description": "Click the copy to clipboard button"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the clipboard contains the formatted estimate text"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a confirmation message or feedback is shown to the user"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "PDF export for Free tier user includes watermark",
+    "description": "Verify that Free tier users can export estimates as PDFs with the expected watermark branding",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a Free tier user"
+      },
+      {
+        "type": "action",
+        "description": "Create an estimate on the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Trigger PDF export"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the downloaded PDF contains the estimate details and visible watermark"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "PDF export for Paid tier user includes professional branding",
+    "description": "Verify that Monthly and Annual subscribers export clean branded PDFs without watermark, and Annual tier includes user logo if uploaded",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a Monthly subscriber"
+      },
+      {
+        "type": "action",
+        "description": "Create an estimate on the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Trigger PDF export and verify no watermark appears"
+      },
+      {
+        "type": "action",
+        "description": "Logout and login as Annual subscriber with uploaded company logo"
+      },
+      {
+        "type": "action",
+        "description": "Create an estimate and export to PDF"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the PDF includes the user uploaded logo and professional branding without watermark"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Free tier estimate usage limits enforced",
+    "description": "Verify that Free users are limited to creating 3 estimates per month and receive appropriate messaging after limit is reached",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as Free tier user with 0 estimates used this month"
+      },
+      {
+        "type": "action",
+        "description": "Create and save 3 estimates sequentially"
+      },
+      {
+        "type": "assertion",
+        "description": "After third estimate, verify that further estimate creation is blocked or disabled"
+      },
+      {
+        "type": "assertion",
+        "description": "Check user receives notification regarding monthly estimate limit"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Saved estimate templates accessible to Monthly and Annual subscribers only",
+    "description": "Verify that only Monthly and Annual subscriptions can save and load estimate templates, and Free users cannot access this feature",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as Free tier user and attempt to save an estimate template"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that save template functionality is unavailable or disabled"
+      },
+      {
+        "type": "action",
+        "description": "Login as Monthly subscriber"
+      },
+      {
+        "type": "action",
+        "description": "Create and save an estimate template"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify template is saved and can be loaded later"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "User settings update company name and upload logo",
+    "description": "Verify that users can update their company name and upload a logo file, with file validation, and changes persist for branding on PDFs",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login and navigate to user settings page"
+      },
+      {
+        "type": "action",
+        "description": "Update the company name input field"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to upload an invalid file type as logo"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that invalid file upload is rejected with error message"
+      },
+      {
+        "type": "action",
+        "description": "Upload a valid logo image file"
+      },
+      {
+        "type": "action",
+        "description": "Save the settings"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that company name and logo are saved and reflected in user profile and PDF export branding"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Stripe webhook updates subscription status and triggers email",
+    "description": "Validate that Stripe webhook events correctly update user subscription status in system and send confirmation emails via Resend",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate Stripe webhook event for subscription payment succeeded"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that user's subscription status is updated to active"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that a subscription confirmation email is sent to the user"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Password reset email triggers appropriately and reset succeeds",
+    "description": "Verify that password reset emails are sent on request, reset links function correctly, and password is updated",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Request password reset for registered email"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify reset email is sent with correct content"
+      },
+      {
+        "type": "action",
+        "description": "Use reset link to access reset password page"
+      },
+      {
+        "type": "action",
+        "description": "Submit new valid password"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify password is updated and user can login with new password"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Dashboard responsiveness and accessibility",
+    "description": "Verify all dashboard components, including Quick Estimate Builder and Saved Estimates tab, are responsive and accessible per WCAG AA+ standards, including keyboard navigation",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Resize browser window to various screen sizes including mobile"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify UI components adapt layout properly without overflow or clipping"
+      },
+      {
+        "type": "action",
+        "description": "Navigate dashboard using keyboard only"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify focus outlines are visible and all interactive elements are reachable"
+      },
+      {
+        "type": "assertion",
+        "description": "Use accessibility tools to verify ARIA labels and contrast ratios meet WCAG AA+ standards"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Estimate data is not stored server-side",
+    "description": "Confirm that estimate data is never stored on the server and all calculations and storage happen client-side to comply with privacy policies",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Create and save estimates and templates using dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Inspect network traffic and verify no estimate data is sent to or stored on server endpoints"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm saved templates are handled only within authorized mechanisms for Monthly/Annual tiers"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Pricing page displays correct tier comparison and Stripe payment links",
+    "description": "Verify that the pricing page shows accurate comparison of Free, Monthly, and Annual tiers and the Stripe payment links function correctly",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the pricing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that each subscription tier is listed with correct features and limits"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that Stripe payment links are present and clickable for Monthly and Annual plans"
+      },
+      {
+        "type": "action",
+        "description": "Click payment link and confirm navigation to Stripe checkout page"
+      }
+    ]
+  }
+]

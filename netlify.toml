@@ -1,0 +1,83 @@
+[build]
+  command = "npm run build && npm run build:server"
+  functions = "netlify/functions"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Include devDependencies during install (needed for vite, typescript, etc.)
+  NPM_FLAGS = "--include=dev"
+  # Skip secrets scanning in test files (they contain test API keys, not production)
+  SECRETS_SCAN_OMIT_PATHS = "testsprite_tests,.taskmaster,docs"
+  # Skip scanning for non-secret environment variables
+  # These are safe to include in build output:
+  # - NODE_ENV: just "production"
+  # - Payment link URLs: public Stripe URLs meant for frontend users to click
+  # - BETTER_AUTH_URL: just the app's base URL, not a secret
+  # - RESEND_FROM_EMAIL: just a from email address, not a secret
+  SECRETS_SCAN_OMIT_KEYS = "NODE_ENV,VITE_STRIPE_PAYMENT_LINK_URL,VITE_STRIPE_PAYMENT_LINK_MONTHLY,VITE_STRIPE_PAYMENT_LINK_ANNUAL,STRIPE_PAYMENT_LINK_URL,STRIPE_PAYMENT_LINK_MONTHLY,STRIPE_PAYMENT_LINK_ANNUAL,BETTER_AUTH_URL,RESEND_FROM_EMAIL"
+
+# Functions configuration
+[functions]
+  # Use ESM for Netlify Functions
+  node_bundler = "esbuild"
+  # Include necessary files
+  included_files = ["server/**"]
+  # External packages that shouldn't be bundled (native modules, etc.)
+  external_node_modules = ["@neondatabase/serverless", "pg"]
+
+# Specific configuration for the API function
+[functions.api]
+  # Increase memory for larger bundle
+  memory = 1024
+
+# API routes - redirect to serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback - all other routes to index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache uploaded files with revalidation
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
+# API headers - CORS handled by the function, but ensure proper content type
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+# Environment variable context (production vs preview)
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  environment = { NODE_ENV = "production" }
+
+[context.branch-deploy]
+  environment = { NODE_ENV = "production" }

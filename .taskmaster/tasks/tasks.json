@@ -1,0 +1,225 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Setup Frontend Scaffolding with Vite, React, and Tailwind",
+        "description": "Initialize the project structure with Vite build tool, React framework, and Tailwind CSS for styling",
+        "details": "Create new Vite project with React template: `npm create vite@latest plumbpro-estimate -- --template react`. Install Tailwind CSS: `npm install -D tailwindcss postcss autoprefixer && npx tailwindcss init -p`. Configure tailwind.config.js with content paths and custom colors (#C41E3A crimson, #1A1A1A dark bg, #E8D5C4 cream). Set up React Router DOM for navigation between Landing, Signup, Login, Dashboard pages. Create basic component structure with src/components, src/pages, src/utils folders. Add favicon files (16x16, 32x32, 180x180) with wrench icon on dark background.",
+        "testStrategy": "Verify Vite dev server starts successfully, Tailwind classes apply correctly, routing works between pages, favicon displays in browser tab",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-10T23:16:06.488Z"
+      },
+      {
+        "id": "2",
+        "title": "Implement Basic SEO and Meta Tags",
+        "description": "Add essential SEO elements including meta tags, Open Graph tags, sitemap, and robots.txt",
+        "details": "Add React Helmet or similar for dynamic meta tags. Configure index.html with: title 'Plumbpro Estimate - Professional Plumbing Quotes in Under 60 Seconds', meta description highlighting key benefits. Add Open Graph tags: og:title, og:description, og:image (hero screenshot), og:url. Create public/sitemap.xml with main pages (/, /pricing, /login, /signup). Add robots.txt allowing all crawlers. Ensure semantic HTML structure with proper h1, h2 hierarchy and alt tags for images. Add structured data markup for business information.",
+        "testStrategy": "Validate meta tags appear in browser dev tools, test Open Graph preview with Facebook debugger, verify sitemap.xml is accessible, check robots.txt loads correctly",
+        "priority": "medium",
+        "dependencies": [
+          "1"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-11T16:04:59.407Z"
+      },
+      {
+        "id": "3",
+        "title": "Configure Hono API Backend with Better-Auth Integration",
+        "description": "Set up Hono backend server with Better-Auth for authentication and session management",
+        "details": "Initialize Hono project: `npm create hono@latest plumbpro-api`. Install Better-Auth: `npm install better-auth @better-auth/hono-adapter`. Configure Better-Auth with email/password provider, session management, and Hono adapter. Set up environment variables for database URL, auth secret, and email credentials. Create API routes structure: /auth/*, /api/webhooks/stripe, /api/pdf/generate. Configure CORS for frontend domain. Set up middleware for authentication checks and request logging. Deploy configuration for production environment.",
+        "testStrategy": "Verify Hono server starts without errors, Better-Auth endpoints respond correctly, CORS allows frontend requests, environment variables load properly",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-11T16:08:30.541Z"
+      },
+      {
+        "id": "4",
+        "title": "Setup Neon Database with Drizzle ORM",
+        "description": "Configure PostgreSQL database on Neon with Drizzle ORM for user and template data",
+        "details": "Create Neon PostgreSQL database and obtain connection string. Install Drizzle: `npm install drizzle-orm @neondatabase/serverless drizzle-kit`. Define schema in src/db/schema.ts: Users table (id, email, subscription_tier enum ['free', 'monthly', 'annual'], stripe_customer_id, stripe_status, estimates_this_month, created_at, updated_at), Templates table (id, user_id FK, name, equipment_cost, materials_cost, labor_hours, labor_rate, discount_percent, created_at). Configure drizzle.config.ts with Neon connection. Create migration files and run initial migration. Set up database connection utility with connection pooling.",
+        "testStrategy": "Verify database connection works, tables created successfully, can insert/query test data, foreign key constraints work properly",
+        "priority": "high",
+        "dependencies": [
+          "3"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-11T16:28:46.306Z"
+      },
+      {
+        "id": "5",
+        "title": "Integrate Stripe Payment Links and Webhooks",
+        "description": "Set up Stripe payment processing with hosted payment links for subscription tiers",
+        "details": "Create Stripe account and obtain API keys. Install Stripe SDK: `npm install stripe`. Create payment links in Stripe dashboard: Monthly ($19/month recurring), Annual ($149/year recurring). Configure webhook endpoint /api/webhooks/stripe to handle: checkout.session.completed, customer.subscription.created, customer.subscription.updated, customer.subscription.deleted. Implement webhook signature verification for security. Update user subscription_tier and stripe_status in database based on webhook events. Set up redirect URLs: success -> /dashboard, cancel -> /pricing. Add customer portal link for subscription management.",
+        "testStrategy": "Test payment flow end-to-end, verify webhooks receive and process events correctly, confirm user subscription status updates in database, test subscription cancellation flow",
+        "priority": "high",
+        "dependencies": [
+          "4"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-12T16:10:02.164Z"
+      },
+      {
+        "id": "6",
+        "title": "Implement Resend Email Service for Transactional Emails",
+        "description": "Configure Resend for password reset and account notification emails",
+        "details": "Create Resend account and obtain API key. Install Resend SDK: `npm install resend`. Create email templates: password reset with secure token link, welcome email for new signups, subscription confirmation. Configure Better-Auth to use Resend for password reset emails. Set up email sending utility with error handling and retry logic. Configure 'from' address: noreply@plumbproestimate.dev. Ensure emails are mobile-responsive with dark theme styling matching the app. Add unsubscribe links where required by law.",
+        "testStrategy": "Send test emails for each template, verify emails render correctly on mobile and desktop, test password reset flow end-to-end, confirm delivery rates and bounce handling",
+        "priority": "medium",
+        "dependencies": [
+          "3"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-12T22:41:36.710Z"
+      },
+      {
+        "id": "7",
+        "title": "Build Landing Page with Dark Theme and Animated Hero",
+        "description": "Create the main landing page with dark hero section, animated headline, and feature highlights",
+        "details": "Design landing page layout: Navigation bar with logo, links (Features, Pricing, Login), crimson 'Get Started' button. Hero section with dark background (#1A1A1A), subtle cross pattern overlay, animated cycling text ('accurate', 'professional', 'fast') in crimson (#C41E3A). Add dual CTAs: 'Get Started Free' and 'View Pricing'. Feature icons section: PDF Export, Under 60 Seconds, Email to Clients. Warm cream wave divider (#D4B896) transitioning to light sections. Pricing preview and testimonials on cream background (#E8D5C4). Ensure mobile-first responsive design with touch-friendly buttons (min 44px).",
+        "testStrategy": "Verify animated text cycles smoothly, responsive design works on mobile/tablet/desktop, contrast meets WCAG AA standards, CTAs link to correct pages, cross pattern renders without affecting readability",
+        "priority": "high",
+        "dependencies": [
+          "1",
+          "2"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-12T22:50:02.694Z"
+      },
+      {
+        "id": "8",
+        "title": "Create Pricing Page with Three-Tier Comparison",
+        "description": "Build pricing page showing Free, Monthly, and Annual subscription tiers with feature comparison",
+        "details": "Design pricing table with dark theme: Free ($0 - 3 estimates/month, watermarked PDFs), Monthly ($19/month - unlimited estimates, no watermark, save templates), Annual ($149/year - save 35%, priority support, logo upload). Highlight Annual tier savings with badge. Use crimson accents for recommended tier. Include feature comparison matrix with checkmarks/X marks. Add FAQ section addressing common concerns. Implement 'Get Started' buttons linking to appropriate Stripe payment links or signup flow. Ensure mobile-responsive table that stacks on small screens.",
+        "testStrategy": "Verify pricing calculations are accurate, buttons link to correct Stripe payment links, table is readable on all screen sizes, feature comparisons are clear and accurate",
+        "priority": "medium",
+        "dependencies": [
+          "7"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T15:23:29.388Z"
+      },
+      {
+        "id": "9",
+        "title": "Implement User Authentication Flow with Better-Auth",
+        "description": "Build signup, login, and password reset pages with Better-Auth integration",
+        "details": "Create signup page: email input, password requirements, terms acceptance. Integrate with Better-Auth for account creation. Add login page with email/password fields, 'Remember me' option, 'Forgot Password' link. Implement password reset flow: forgot password page with email input, reset password page with token validation and new password form. Add form validation with helpful error messages. Style forms with dark theme, crimson accents, and proper focus states. Implement session management with automatic redirect to dashboard for authenticated users. Add loading states and success/error feedback.",
+        "testStrategy": "Test complete signup flow, verify login works with correct credentials, test password reset end-to-end, confirm session persistence across browser refresh, validate form error handling",
+        "priority": "high",
+        "dependencies": [
+          "3",
+          "6"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T16:01:36.503Z"
+      },
+      {
+        "id": "10",
+        "title": "Build Estimate Builder Dashboard Interface",
+        "description": "Create the main dashboard with input fields for estimate calculation",
+        "details": "Design dashboard layout with dark theme: input section on left (mobile: top), output section on right (mobile: bottom). Input fields: Equipment Cost ($), Materials Cost ($), Labor Hours (number), Labor Rate ($/hr), Discount % (0-100). Style inputs with dark background, white text, crimson focus states. Add clear labels and help text for each field. Include input validation (positive numbers, percentage limits). Add 'Clear All' button to reset form. Implement responsive design that stacks on mobile with adequate spacing for field use. Add user tier indicator and usage counter for free users.",
+        "testStrategy": "Verify all input fields accept appropriate values, validation works correctly, responsive layout functions on mobile devices, clear button resets all fields, user tier displays correctly",
+        "priority": "high",
+        "dependencies": [
+          "9"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T16:12:11.436Z"
+      },
+      {
+        "id": "11",
+        "title": "Implement Real-Time Estimate Calculations",
+        "description": "Build the calculation engine that updates estimate totals in real-time as users type",
+        "details": "Implement calculation logic: Labor Total = Labor Hours × Labor Rate, Subtotal = Equipment + Materials + Labor Total, Discount Amount = Subtotal × (Discount % / 100), Final Price = Subtotal - Discount Amount. Add tiered pricing: Standard (1.0×), Priority (1.15×), Emergency (1.30×). Create output display with formatted currency values, clear breakdown of all calculations. Update calculations on every input change with debouncing (300ms) for performance. Add visual indicators for calculation updates. Format all currency values consistently ($X,XXX.XX). Handle edge cases like zero values and invalid inputs gracefully.",
+        "testStrategy": "Verify calculations are mathematically correct, real-time updates work smoothly, currency formatting is consistent, tiered pricing calculates properly, edge cases handled without errors",
+        "priority": "high",
+        "dependencies": [
+          "10"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T16:20:32.649Z"
+      },
+      {
+        "id": "12",
+        "title": "Add Copy to Clipboard Functionality",
+        "description": "Implement copy to clipboard feature for estimate text with user feedback",
+        "details": "Create 'Copy Estimate' button with crimson styling and hover effects. Format estimate text for clipboard: company name, job breakdown (equipment, materials, labor), subtotal, discount, final price, tiered options. Use navigator.clipboard.writeText() API with fallback for older browsers. Add visual feedback: button text changes to 'Copied!' with checkmark icon, returns to normal after 2 seconds. Include tooltip on hover. Handle clipboard permission errors gracefully with user-friendly messages. Ensure copied text is well-formatted for pasting into emails or text messages.",
+        "testStrategy": "Test copy functionality across different browsers, verify clipboard contains properly formatted text, confirm visual feedback works correctly, test fallback for browsers without clipboard API",
+        "priority": "medium",
+        "dependencies": [
+          "11"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T17:34:45.262Z"
+      },
+      {
+        "id": "13",
+        "title": "Implement PDF Export with react-pdf",
+        "description": "Build PDF generation and download functionality with tier-appropriate branding",
+        "details": "Install react-pdf: `npm install @react-pdf/renderer`. Create PDF template with professional layout: header with company name/logo (Annual tier only), estimate details table, breakdown of costs, tiered pricing options, footer. Implement watermark for Free tier: 'Created with PlumbPro Estimate' in footer. For paid tiers, generate clean PDF without watermark. Add logo upload functionality for Annual tier users: accept PNG/SVG files, validate file type/size, use in-memory only (no storage). Style PDF with clean white background, dark text, crimson accents for headers. Add 'Download PDF' button with loading state during generation.",
+        "testStrategy": "Generate PDFs for each tier and verify correct watermark/branding, test logo upload for Annual users, confirm PDF formatting is professional and print-ready, validate file type restrictions work",
+        "priority": "high",
+        "dependencies": [
+          "11"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T17:23:22.438Z"
+      },
+      {
+        "id": "14",
+        "title": "Implement Template Save/Load Feature for Paid Users",
+        "description": "Add ability for Monthly and Annual users to save and reuse estimate templates",
+        "details": "Create template management UI: 'Save Template' button for paid users, template name input modal, 'Load Template' dropdown with saved templates. Implement backend API endpoints: POST /api/templates (create), GET /api/templates (list user's templates), DELETE /api/templates/:id. Store templates in database with user association. Add template validation and error handling. Show upgrade prompt for Free users when they try to save templates. Implement template loading that populates all input fields. Add template management section with rename/delete options. Limit templates per user (e.g., 10 max) to prevent abuse.",
+        "testStrategy": "Verify templates save correctly for paid users, Free users see upgrade prompt, template loading populates all fields correctly, template management functions work properly, API endpoints handle errors gracefully",
+        "priority": "medium",
+        "dependencies": [
+          "13",
+          "4"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T19:12:29.724Z"
+      },
+      {
+        "id": "15",
+        "title": "Add Usage Tracking and Tier Enforcement",
+        "description": "Implement estimate counter for Free tier and enforce monthly limits",
+        "details": "Add estimate counter increment on PDF download/copy for Free tier users. Update user.estimates_this_month in database on each estimate action. Implement monthly reset logic (cron job or check on first action of new month). Show usage indicator for Free users: 'X of 3 estimates used this month'. Block PDF download/copy when limit reached, show upgrade prompt with link to pricing. Add grace period messaging: 'Limit reached - upgrade to continue'. For paid users, show 'Unlimited' status. Implement server-side validation to prevent client-side bypass. Add usage analytics tracking (anonymized) for product insights.",
+        "testStrategy": "Verify Free tier counter increments correctly, monthly reset works properly, limits are enforced on both frontend and backend, upgrade prompts appear at appropriate times, paid users have unlimited access",
+        "priority": "high",
+        "dependencies": [
+          "13",
+          "5"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "updatedAt": "2026-01-13T17:29:42.856Z"
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "lastModified": "2026-01-13T19:12:29.724Z",
+      "taskCount": 15,
+      "completedCount": 15,
+      "tags": [
+        "master"
+      ]
+    }
+  }
+}

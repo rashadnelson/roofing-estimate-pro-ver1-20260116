@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8086",
+  "loginUser": "rashadnelson+ppetest@gmail.com",
+  "loginPassword": "Password123!!!",
+  "executionArgs": {
+    "projectName": "plumbpro-estimate-ver1-20260104",
+    "projectPath": "C:\\Users\\rasha\\Documents\\apps-on-local-pc\\plumbpro-estimate\\plumbpro-estimate-ver1-20260104",
+    "testIds": [],
+    "additionalInstruction": "Test user credentials: email=rashadnelson+ppetest1@gmail.com. For Stripe test payments, use card 4242424242424242, any future expiry date, any CVC. The app runs on port 8086 for frontend and port 3001 for backend API.",
+    "envs": {
+      "API_KEY": "sk-user-vGkjDI6RvITI9A-CUuSPCIRon6ufqnsouYHP580u1xxP1Bh8Q9790_HuSalkgUXdA_rD_bxi_ifAVN1_BtipFTBTXIdGl251nxJPeF4t_9LIvWbYhOWWqEsFmOK2T4AtroM"
+    }
+  },
+  "proxy": "http://ea751c60-4412-44f0-9345-0d54fb307b77:2JpZnuQdEBlDAn4zY7LxlQNwkqWGdPF2@tun.testsprite.com:8080"
+}

@@ -1,0 +1,703 @@
+## 🔧 Plumbpro Estimate: Masterplan
+
+### ⏱ 30-Second Elevator Pitch
+Plumbpro Estimate helps plumbing professionals send quotes that are accurate, professional, and fast. Create professional plumbing estimates in under a minute. No more messy paperwork or lost quotes—just sharp, branded PDFs your clients will trust.
+
+---
+
+### 🚨 Problem & Mission
+
+**The Problem:**  
+Plumbing contractors often rely on gut feel, scribbled notes, or messy spreadsheets to price jobs—risking undercharging, losing money on materials, or appearing unprofessional to customers.
+
+**Our Mission:**  
+Empower plumbing professionals with a pricing assistant that's accurate, fast, and trustworthy—like a digital estimate sheet that never lets you leave money on the table.
+
+---
+
+### 🎯 Target Audience
+
+- Independent plumbers and small plumbing companies (≤15 employees)
+- Residential and commercial plumbing contractors
+- Service technicians providing on-site estimates
+- Users currently relying on spreadsheets, handwritten notes, or memory
+- Non-technical contractors seeking simplicity and professionalism
+
+---
+
+### 🧩 Core Features
+
+- **Sales Landing Page**  
+  Dark hero with animated headline ("Send quotes that are accurate/professional/fast"), dual CTAs ("Get Started Free" and "View Pricing"), and feature highlights: PDF Export, Under 60 Seconds, Email to Clients.
+
+- **Signup + Stripe Payment**  
+  Streamlined 2-step flow: email → pay → estimate dashboard.
+
+- **Authentication**  
+  - Email/password login  
+  - Forgot Password with email reset link  
+  - Secure session management via Better-Auth
+
+- **Main Dashboard — Estimate Builder**  
+  - Estimate inputs: equipment cost, materials cost, labor hours, labor rate, discount %
+  - Live estimate preview: labor total, subtotal, discount amount, final price
+  - Tiered pricing options (standard, priority, emergency)
+
+- **Export Options**  
+  - Copy estimate as plain text (all tiers)
+  - Download PDF — watermarked (Free) or clean branded (Paid)
+  - Logo upload on PDF (Annual tier only)
+
+- **Zero data retention**  
+  All estimates calculated client-side. No storage = no risk.
+  
+- **Three Pricing Tiers**  
+  - **Free:** $0 — 3 estimates/month, watermarked PDFs
+  - **Monthly:** $19/month — Unlimited estimates, no watermark, save templates
+  - **Annual:** $149/year ($12.42/mo) — Save 35%, priority support, logo upload
+
+---
+
+### 🛠 Tech Stack (With Why)
+
+- **React + Vite + Tailwind**  
+  Fast, lightweight, and perfect for mobile-first UIs—essential for contractors in the field.
+
+- **Hono**  
+  Lightweight, fast API routing for auth, Stripe webhooks, and PDF generation.
+
+- **Neon + Drizzle**  
+  Simple relational DB (only stores auth + payment status).
+
+- **Better-Auth**  
+  Modern, secure authentication with built-in session management and OAuth support.
+
+- **Resend**  
+  Reliable transactional email delivery for password resets and account notifications.
+
+- **Stripe Payment Links**  
+  Fast setup; trusted brand.
+
+- **react-pdf**  
+  Clean, customizable estimate exports with branded professional feel.
+
+---
+
+### 🧱 Conceptual Data Model (in words)
+
+- **User**  
+  - `id`, `email`, `subscription_tier`, `stripe_status`  
+  - `subscription_tier`: "free" | "monthly" | "annual"
+  - `estimates_this_month`: counter for free tier limit (resets monthly)
+  - No estimate data stored—just auth and subscription info.
+
+- **Estimate (Client-side only)**  
+  - `equipmentCost`, `materialsCost`, `laborHours`, `laborRate`, `discountPercent`  
+  - Derived values: `laborTotal`, `subtotal`, `discountAmount`, `finalPrice`, `tieredPrices[]`  
+  - Logo + company name = session-only inputs for export (Annual tier only for logo).
+  - Free tier: watermark added to PDF exports
+
+- **Saved Templates (Monthly/Annual only)**  
+  - `id`, `user_id`, `name`, `equipmentCost`, `materialsCost`, `laborHours`, `laborRate`, `discountPercent`
+  - Stored server-side for paid users only
+
+---
+
+### ✨ UI Design Principles
+
+- Bold, dark aesthetic with crimson accents—premium and trade-focused
+- Large inputs, ample spacing, clear labels—optimized for on-site use
+- WCAG AA+ compliant typography and color (high contrast on dark backgrounds)
+- Mobile-first design for field technicians
+- Dark hero sections with subtle cross pattern texture
+- Warm cream sections provide visual breathing room
+- Every interaction respects the user's workflow:
+  - Success = clear feedback with checkmarks
+  - Error = helpful guidance without alarm
+  - Export = professional control with prominent CTAs
+
+> Inspired by Krug's law: *"Don't make me think."*
+
+---
+
+### 🔐 Security & Compliance Notes
+
+- No estimate data stored server-side (estimates are always client-side)
+- Saved templates (Monthly/Annual) stored encrypted with user association
+- Stripe handles all payments (PCI-compliant)
+- Better-Auth handles session management with secure, httpOnly cookies
+- Password reset tokens are single-use and expire after 1 hour
+- Logo upload (Annual tier) is ephemeral—not stored, just used for in-memory PDF generation
+- Free tier estimate counter resets monthly (server-side tracking)
+- All frontend forms ARIA-labeled and fully keyboard-navigable
+
+---
+
+### 🛣 Roadmap (Phased)
+
+**MVP**  
+- Landing page  
+- Signup + Stripe flow  
+- Dashboard inputs + live estimate  
+- Copy & PDF export  
+- Logo/name support (no storage)
+- Favicon updated with site logo
+- Basic SEO (meta tags, Open Graph, sitemap)
+
+**V1**  
+- Usage analytics (opt-in, anonymized)  
+- PDF styling themes (classic, modern, bold)  
+- Export history (local browser storage)
+- Line item descriptions for detailed breakdowns
+
+**V2**  
+- "Smart Pricing" AI suggestions based on job type  
+- Save customer profiles (with consent)  
+- Offline mode (PWA) for no-signal job sites
+- Common plumbing job templates (water heater, drain cleaning, fixture install)
+
+---
+
+### ⚠️ Risks & Mitigations
+
+| Risk | Mitigation |
+|------|------------|
+| Users think data is stored | Reassuring copy + visual cues: "Nothing is saved" |
+| Overwhelmed by export options | Keep only two: Copy or PDF |
+| Trust issues with pricing math | Transparent breakdown; no hidden calculations |
+| Mobile layout breaks on job sites | Test against real workflows on small screens |
+| Field technicians need offline access | PWA mode planned for V2 |
+| Free tier abuse (multiple accounts) | Rate limiting, email verification required |
+| Unclear tier differences | Clear comparison table, feature badges in dashboard |
+| Watermark too intrusive | Subtle "Created with PlumbPro Estimate" footer placement |
+
+---
+
+### 🚀 Future Expansion Ideas
+
+- White-label mode (custom domain + PDF theme)
+- Customer portal (view + approve estimates)
+- Zapier/QuickBooks integration
+- Parts catalog with pricing database
+- Multi-job estimate bundling
+
+---
+
+### 📬 Contact
+
+- **Support:** support@plumbproestimate.dev  
+- **General inquiries:** hello@plumbproestimate.dev
+
+
+## 🔧 Plumbpro Estimate: Implementation Plan
+
+---
+
+### 🧱 Step-by-Step Build Sequence
+
+#### 📦 Phase 1: Core Infrastructure
+
+1. **Setup frontend scaffolding**  
+   - Vite + React + Tailwind project  
+   - Set up routing (Landing, Signup, Dashboard)
+   - Add favicon with Plumbpro Estimate logo
+
+2. **Basic SEO setup**  
+   - Add meta title + description to landing page  
+   - Add Open Graph tags (og:title, og:description, og:image)  
+   - Create sitemap.xml and robots.txt  
+   - Ensure semantic HTML (h1, h2, alt tags)
+
+3. **Configure Hono API backend**  
+   - Create API routes for:  
+     - Stripe webhook validation  
+     - Auth endpoints (via Better-Auth)  
+     - PDF generation
+
+4. **Integrate Stripe Payment Links**  
+   - Create hosted payment links for Monthly ($19) and Annual ($149) tiers
+   - Handle subscription management (upgrade/downgrade/cancel)
+   - Redirect to dashboard post-success  
+   - Store subscription tier and Stripe status in Neon
+
+5. **Add Neon + Drizzle ORM**  
+   - Define `User` table: `id`, `email`, `subscription_tier`, `stripe_status`, `estimates_this_month`  
+   - Define `Template` table: `id`, `user_id`, `name`, `equipment_cost`, `materials_cost`, `labor_hours`, `labor_rate`, `discount_percent`
+   - Connect with Hono API for user auth + Stripe sync
+
+6. **Better-Auth + Resend Setup**  
+   - Configure Better-Auth with Hono adapter  
+   - Set up email/password authentication  
+   - Implement secure session management  
+   - Integrate Resend for transactional emails (password reset, welcome)
+
+---
+
+#### 🧮 Phase 2: MVP Dashboard
+
+7. **Design estimate builder UI**  
+   - Input section: equipment cost, materials cost, labor hours, labor rate, discount %  
+   - Include clear help text + placeholder guidance
+
+8. **Build real-time output calculator**  
+   - Auto-update: labor total, subtotal, discount amount, final price  
+   - Add tiered pricing: standard, priority (+15%), emergency (+30%)
+
+9. **Create "Copy to Clipboard" button**  
+   - Add pulse on hover, checkmark on success  
+   - Tooltip: "Copied to clipboard!"
+
+10. **Implement `react-pdf` export**  
+    - Include job breakdown, company name  
+    - Free tier: Add "Created with PlumbPro Estimate" watermark
+    - Paid tiers: Clean PDF without watermark
+    - Annual tier: Logo upload support (PNG/SVG)
+    - Display note: "Info not stored—for your estimate only"
+
+---
+
+#### 🔐 Phase 3: Auth & User Flow Polish
+
+11. **Signup flow**  
+    - Email input + redirect to Stripe  
+    - On success, auto-login to dashboard via Better-Auth session
+
+12. **Login flow**  
+    - Return user via session check → dashboard  
+    - No estimate history shown
+
+13. **Forgot Password flow**  
+    - "Forgot Password" link on login page  
+    - Email input → send reset link via Better-Auth + Resend  
+    - Reset Password page: validate token, accept new password  
+    - Success → redirect to login with confirmation message
+
+14. **Secure logo input (Annual tier)**  
+    - Client-side only, memory-only  
+    - Accept PNG/SVG, reject others with friendly error
+    - Show upgrade prompt for Free/Monthly users
+
+---
+
+### 🗓 Timeline with Checkpoints
+
+| Week | Goals |
+|------|-------|
+| 1 | Frontend scaffold, routing, favicon, basic SEO |
+| 2 | Hono API setup, Stripe integration |
+| 3 | Neon + Drizzle, Better-Auth + Resend |
+| 4 | Estimate builder UI, real-time calculator |
+| 5 | Copy + PDF export, logo input |
+| 6 | Auth flows polish, testing, launch prep |
+
+---
+
+### ✅ Definition of Done (MVP)
+
+- [ ] Landing page live with CTAs for Free and Paid tiers
+- [ ] Pricing page with three-tier comparison table
+- [ ] Signup → Stripe → Dashboard flow complete (Free and Paid paths)
+- [ ] Free tier: 3 estimates/month limit enforced, watermark on PDFs
+- [ ] Paid tiers: Unlimited estimates, no watermark
+- [ ] Monthly tier: Save templates feature working
+- [ ] Annual tier: Logo upload on PDFs working
+- [ ] Estimate inputs calculate correctly in real-time
+- [ ] Copy to clipboard works
+- [ ] PDF export with appropriate watermark/branding per tier
+- [ ] Forgot Password flow functional
+- [ ] Mobile responsive across all pages
+- [ ] Favicon displays correctly
+- [ ] Basic SEO implemented
+
+
+## 🔧 Plumbpro Estimate: Design System
+
+---
+
+### 🔤 Typography Guide
+
+| Style     | Font               | Size (px) | Weight | Notes                                 |
+|-----------|--------------------|-----------|--------|----------------------------------------|
+| H1        | Sans-serif (bold)  | 48–64     | Bold   | White on dark; large impactful headlines |
+| H1 Accent | Sans-serif (bold)  | 48–64     | Bold   | Crimson red animated/cycling text      |
+| H2 / H3   | Sans-serif         | 24–32     | Medium | Generous line height (1.5–1.75×)       |
+| Body      | Neutral sans-serif | 16–18     | Regular| Muted gray on dark; warm cream on light |
+| Help text | Muted, same family | 14–15     | Regular| Clear guidance tone; smaller but legible |
+| Badge     | Sans-serif         | 12–14     | Medium | Uppercase, letter-spaced, crimson bg   |
+
+✅ All type meets WCAG AA+ contrast and spacing standards.
+
+---
+
+### 🎨 Color System
+
+| Purpose        | Hex       | RGB            | Notes                                   |
+|----------------|-----------|----------------|-----------------------------------------|
+| Primary        | `#C41E3A` | 196, 30, 58     | Crimson red — buttons, CTAs, accents    |
+| Primary Dark   | `#A01830` | 160, 24, 48     | Darker crimson — hover states           |
+| Background Dark| `#1A1A1A` | 26, 26, 26      | Near-black — main dark sections         |
+| Background Pattern | `#2A2A2A` | 42, 42, 42  | Subtle cross/plus grid pattern overlay  |
+| Surface Light  | `#E8D5C4` | 232, 213, 196   | Warm cream/beige — light sections       |
+| Surface Wave   | `#D4B896` | 212, 184, 150   | Tan/sand — decorative wave element      |
+| Text Light     | `#FFFFFF` | 255, 255, 255   | White — headlines on dark               |
+| Text Muted     | `#9CA3AF` | 156, 163, 175   | Gray — body text on dark background     |
+| Text Dark      | `#1A1A1A` | 26, 26, 26      | Near-black — text on light sections     |
+| Success state  | `#22C55E` | 34, 197, 94     | Green — confirmations                   |
+
+- Use **bold contrast** between dark backgrounds and crimson accents
+- Subtle **cross/plus pattern** overlay on dark sections for texture
+- **Warm cream wave** transitions between dark and light sections
+- Ensure all text meets 4.5:1 contrast requirements
+
+#### Button Styles
+
+| Type      | Background | Text Color | Notes                                   |
+|-----------|------------|------------|-----------------------------------------|
+| Primary   | `#C41E3A`  | `#FFFFFF`  | Crimson red; main CTAs with arrow →     |
+| Secondary | `#2A2A2A`  | `#FFFFFF`  | Dark gray; secondary actions            |
+| Ghost     | transparent| `#FFFFFF`  | Text links, nav items on dark           |
+| Ghost Dark| transparent| `#1A1A1A`  | Text links on light sections            |
+
+---
+
+### 🖼 Favicon & Branding
+
+- **Logo:** "PlumbPro" in white + "Estimate" in crimson, with wrench icon
+- **Favicon:** Wrench icon in rounded square badge
+- **Recommended formats:** SVG for scalability, PNG fallback (16×16, 32×32, 180×180 for Apple touch)
+- **Favicon colors:** Dark background (#1A1A1A) with crimson (#C41E3A) wrench icon
+- **Badge style:** Crimson background with white uppercase text ("BUILT FOR PLUMBING PROFESSIONALS")
+
+---
+
+### 📐 Spacing & Layout
+
+- **8pt grid system** — maintain vertical rhythm
+- **Generous vertical spacing** between sections
+- **Dark hero section** with subtle cross/plus pattern overlay
+- **Decorative wave divider** (cream/tan) between dark and light sections
+- **Mobile-first logic**:
+  - Inputs stack with ≥16px vertical padding
+  - Form/output go side-by-side on desktop only
+  - Max 2-column layouts; no dense tables or multi-step wizards
+  - Touch-friendly tap targets (min 44px) for field use
+
+---
+
+### 🎞 Motion & Interaction
+
+- **Transition style**: `ease-in-out`, 200–300ms
+- **Animated headline**: Cycling accent words ("accurate", "professional", "fast") in crimson
+- **Input fields**: subtle glow when focused on dark backgrounds
+- **Buttons**: lift effect with shadow on hover, darker crimson on press
+- **Outputs**: live-updated with cross-fade or upward motion
+- **Kind interactions**:
+  - Animated checkmark when copying
+  - Gentle toast on dark background: "PDF downloaded—ready to share!"
+
+⚠️ Respects `prefers-reduced-motion` for accessibility.
+
+---
+
+### ✍️ Voice & Tone
+
+- **Bold & Direct** — "Send quotes that are accurate."
+- **Professional** — "Create professional plumbing estimates in under a minute."
+- **Confident** — "No more messy paperwork or lost quotes—just sharp, branded PDFs your clients will trust."
+- **Respectful of privacy** — "Your logo and company name are not stored—they're just for your PDF."
+
+#### Microcopy Examples:
+- **Hero tagline:** "Built for plumbing professionals"
+- **Onboarding CTA (Free):** "Get Started Free →"
+- **Onboarding CTA (Paid):** "Start for $19/month →" or "Save 35% annually →"
+- **Feature highlights:** "PDF Export • Under 60 Seconds • Email to Clients"
+- **Upgrade prompt:** "Upgrade to remove watermarks and unlock unlimited estimates."
+- **Success message:** "Copied—ready to send to your customer."
+- **Error example:** "Oops—we only support PNG or SVG logos."
+- **Forgot Password link:** "Forgot your password?"
+- **Reset email sent:** "Check your inbox—we've sent you a reset link."
+- **Password reset success:** "All set! Your password has been updated."
+
+---
+
+### ♻️ System Consistency
+
+- Form inputs, export cards, and output summaries share:
+  - Rounded corners (8px radius)
+  - Dark background (#1A1A1A or #2A2A2A)
+  - Subtle borders or elevation for separation
+  - Shared spacing rules and type styles
+
+- **Dark sections** use the cross/plus pattern overlay
+- **Light sections** use warm cream (#E8D5C4) background
+- **Export PDF** uses crimson accents + clean white background for print clarity
+
+---
+
+### ♿ Accessibility
+
+- All inputs labeled with ARIA
+- Keyboard navigation fully supported
+- Focus rings clear and high-contrast (white or crimson on dark)
+- Interactive elements pass 4.5:1 contrast
+- White text (#FFFFFF) on dark backgrounds meets AA standards
+- Muted text (#9CA3AF) used only for non-essential content
+- All motion respects `prefers-reduced-motion`
+- Touch targets sized for gloved/dirty hands (field work)
+- Dark mode is default; consider light mode toggle for accessibility
+
+---
+
+### ✅ Emotional Audit Checklist
+
+Ask this for every screen or interaction:
+
+- Does this interface evoke *bold professionalism*?
+- Does the dark theme feel premium without being intimidating?
+- Are crimson accents drawing attention to the right elements?
+- Would a user feel *confident and efficient*, even when rushed on a job site?
+
+---
+
+### 🧪 Technical QA Checklist
+
+- Typography scale aligns to 8pt rhythm
+- Contrast passes WCAG AA+ (especially white/gray text on dark backgrounds)
+- Crimson buttons have sufficient contrast (#C41E3A on #1A1A1A)
+- Cross pattern overlay doesn't interfere with text readability
+- Buttons and inputs have visible focus/hover states on dark bg
+- Motion stays between 150–300ms unless intentionally cinematic
+- Animated headline text cycles smoothly
+- Wave divider renders correctly at all viewport widths
+- Favicon displays correctly across browsers and devices
+- Mobile layout tested on actual phones in field conditions
+
+---
+
+### 🧠 Design Snapshot Output
+
+#### 🎨 Color Palette
+
+```txt
+Primary:          #C41E3A  (crimson red — buttons, CTAs, accents)
+Primary Dark:     #A01830  (darker crimson — hover states)
+Background Dark:  #1A1A1A  (near-black — main dark sections)
+Background Pattern: #2A2A2A (subtle cross/plus grid overlay)
+Surface Light:    #E8D5C4  (warm cream — light sections)
+Surface Wave:     #D4B896  (tan/sand — decorative wave)
+Text Light:       #FFFFFF  (white — headlines on dark)
+Text Muted:       #9CA3AF  (gray — body text on dark)
+Text Dark:        #1A1A1A  (near-black — text on light)
+Success:          #22C55E  (green — confirmations)
+```
+
+#### 🔤 Typographic Scale
+
+| Element    | Size | Weight  | Color     | Notes                |
+|------------|------|---------|-----------|----------------------|
+| H1         | 56px | Bold    | #FFFFFF   | Sans-serif, white    |
+| H1 Accent  | 56px | Bold    | #C41E3A   | Sans-serif, crimson  |
+| H2         | 32px | Medium  | #FFFFFF   | Sans-serif headers   |
+| Body       | 18px | Regular | #9CA3AF   | Sans-serif, muted    |
+| Badge      | 13px | Medium  | #FFFFFF   | Uppercase on crimson |
+| Help Text  | 14px | Regular | #9CA3AF   | Input guidance       |
+
+#### 📐 Spacing & Layout
+
+- Base unit: **8px**
+- Mobile: stacked inputs, 16px min padding
+- Desktop: max 2-column layout
+- All components align to vertical rhythm
+- Dark sections with subtle cross pattern
+- Wave divider between dark/light sections
+
+#### 🖼 Landing Page Structure
+
+1. **Navigation bar** — Dark bg, logo left, links (Features, Pricing, Login) right, crimson "Get Started" button
+2. **Hero section** — Dark bg with cross pattern, badge, animated headline, dual CTAs (Free / Paid)
+3. **Feature icons** — PDF Export, Under 60 Seconds, Email to Clients
+4. **Wave divider** — Cream/tan curved transition
+5. **Pricing table** — Three tiers (Free, Monthly, Annual) with dark rows, feature comparison
+6. **Light sections** — Product details, testimonials on warm cream background
+
+---
+
+### 🎯 Design Integrity Review
+
+Every interaction in Plumbpro Estimate aims to project bold professionalism and efficiency. The dark theme with crimson accents creates a premium, trade-focused aesthetic that stands out from generic business tools.  
+**Key design decisions:**
+- Dark backgrounds feel modern and reduce eye strain during long quote sessions
+- Crimson red commands attention for CTAs without feeling aggressive
+- Animated cycling text ("accurate", "professional", "fast") adds energy without distraction
+- Warm cream sections provide breathing room and balance the dark theme
+
+**One area to improve:** Consider adding a light mode toggle for users who prefer it during daytime field work.
+
+
+## 🔧 Plumbpro Estimate: App Flow, Pages & Roles
+
+---
+
+### 🗺️ Site Map (Top-Level Pages)
+
+1. **Landing Page**  
+2. **Pricing Page**
+3. **Signup & Payment**  
+4. **Login**  
+5. **Forgot Password**  
+6. **Reset Password**  
+7. **Dashboard (Estimate Builder)**
+
+---
+
+### 📄 Purpose of Each Page
+
+- **Landing Page**  
+  Bold dark hero with animated headline, crimson CTA, and trust-building feature icons. Warm cream sections below for product details. Guide users to "Get Started Free" or paid tiers.
+
+- **Pricing Page**  
+  Three-tier comparison table (Free, Monthly, Annual) with dark background and feature breakdown. Highlight Annual tier savings (35%) and upgrade benefits.
+
+- **Signup & Payment**  
+  Collect email → Select tier → Stripe Link (for paid) → redirect to dashboard. Dark themed forms with crimson accents.
+
+- **Login**  
+  Return users to dashboard with active session check.
+
+- **Forgot Password**  
+  Allow users to request a password reset link via email.
+
+- **Reset Password**  
+  Secure form to set a new password (accessed via email link with token).
+
+- **Dashboard**  
+  Main estimate interface (input → output → export).
+
+---
+
+### 👤 User Roles & Access Levels
+
+| Role      | Access                              |
+|-----------|-------------------------------------|
+| Guest     | View landing and pricing only       |
+| Free User | Dashboard, 3 estimates/month, watermarked PDFs |
+| Monthly User | Full dashboard, unlimited estimates, no watermark, save templates |
+| Annual User | All Monthly features + priority support + logo upload |
+| Admin     | (Future stretch) Stripe dashboard only (external) |
+
+> ✅ Free tier uses estimate counter; paid tiers have unlimited access.
+
+---
+
+### 🧭 Primary User Journeys (Max 3 Steps)
+
+#### 1. **New User Flow (Free)**
+1. Land on homepage  
+2. Click "Get Started Free" → Enter email → Create account  
+3. Redirect to dashboard (Free tier: 3 estimates/month, watermarked)
+
+#### 1b. **New User Flow (Paid)**
+1. Land on homepage  
+2. Click "Get Started" → Select Monthly ($19) or Annual ($149) → Pay via Stripe  
+3. Redirect to dashboard with full access via Better-Auth session
+
+#### 2. **Estimate Creation Flow**
+1. Input equipment cost, materials cost, labor hours, labor rate, discount %  
+2. View live pricing breakdown + tiered options  
+3. Copy or download branded PDF
+
+#### 3. **Returning User Flow**
+1. Login with email  
+2. Better-Auth session check → dashboard  
+3. Start fresh estimate
+
+#### 4. **Password Reset Flow**
+1. Click "Forgot Password" on login page  
+2. Enter email → receive reset link  
+3. Click link → set new password → redirect to login
+
+---
+
+### 💰 Pricing
+
+| Tier | Price | Features |
+|------|-------|----------|
+| Free | $0 | 3 estimates/month, watermarked |
+| Monthly | $19/month | Unlimited estimates, no watermark, save templates |
+| Annual | $149/year ($12.42/mo) | Save 35%, priority support, logo upload |
+
+- **Free tier** allows users to try the product with limited usage
+- **Paid tiers** unlock full functionality immediately upon payment
+- **Payment processing:** Stripe Payment Links
+
+---
+
+### 📬 Support & Contact
+
+- **Support:** support@plumbproestimate.dev  
+- **General inquiries:** hello@plumbproestimate.dev
+
+---
+
+## 🔧 Plumbpro Estimate: Calculation Logic
+
+---
+
+### 📊 Input Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| Equipment Cost | Currency ($) | Cost of equipment (water heaters, fixtures, etc.) |
+| Materials Cost | Currency ($) | Cost of parts and supplies (pipes, fittings, etc.) |
+| Labor Hours | Number | Total hours for the job |
+| Labor Rate | Currency ($/hr) | Hourly rate for labor |
+| Discount % | Percentage (0-100) | Overall discount to apply |
+
+---
+
+### 🧮 Calculation Formulas
+
+```
+Labor Total = Labor Hours × Labor Rate
+Subtotal = Equipment Cost + Materials Cost + Labor Total
+Discount Amount = Subtotal × (Discount % / 100)
+Final Price = Subtotal - Discount Amount
+```
+
+---
+
+### 📈 Tiered Pricing
+
+| Tier | Multiplier | Use Case |
+|------|------------|----------|
+| Standard | 1.00× | Normal scheduling |
+| Priority | 1.15× | Same-week service |
+| Emergency | 1.30× | Same-day/after-hours |
+
+```
+Tiered Price = Final Price × Tier Multiplier
+```
+
+---
+
+### 💡 Example Calculation
+
+**Inputs:**
+- Equipment Cost: $450
+- Materials Cost: $125
+- Labor Hours: 4
+- Labor Rate: $85/hr
+- Discount: 10%
+
+**Outputs:**
+- Labor Total: 4 × $85 = $340
+- Subtotal: $450 + $125 + $340 = $915
+- Discount Amount: $915 × 0.10 = $91.50
+- Final Price: $915 - $91.50 = $823.50
+
+**Tiered Options:**
+- Standard: $823.50
+- Priority: $947.03
+- Emergency: $1,070.55
+
+---

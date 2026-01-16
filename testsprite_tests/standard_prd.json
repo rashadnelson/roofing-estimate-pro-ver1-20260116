@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "project": "Plumbpro Estimate",
+    "date": "2026-01-13",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "Plumbpro Estimate is a fast, professional estimate builder tailored for plumbing professionals. It enables independent plumbers and small plumbing companies to create accurate, branded, and professional plumbing estimates in under a minute, replacing messy paperwork and spreadsheets with digital, easy-to-share quotes.",
+  "core_goals": [
+    "Empower plumbing professionals with a reliable, fast, and accurate estimate creation tool.",
+    "Provide a simple, professional UI optimized for field use by plumbers and contractors.",
+    "Ensure pricing integrity and transparent calculations to build customer trust.",
+    "Support subscription tiers that scale from free with limits to paid plans with enhanced features and branding.",
+    "Protect user privacy by storing minimal data and only saving necessary subscription and authentication info."
+  ],
+  "key_features": [
+    "Landing page with bold, premium dark hero, animated headlines, dual CTA buttons, and feature highlights.",
+    "Signup flow integrated with Stripe for three-tier subscription management: Free, Monthly, and Annual.",
+    "Secure email/password authentication with support for signup, login, forgot password, and reset password flows using Better-Auth.",
+    "Main Dashboard featuring a real-time Quick Estimate Builder with inputs for equipment cost, materials, labor hours, labor rate, and discount percentage.",
+    "Live tiered pricing preview with standard, priority, and emergency service pricing.",
+    "Copy to clipboard functionality for estimate text sharing.",
+    "PDF export of estimates with professional branding: watermarked PDFs for Free users and clean branded PDFs for paid tiers, including user logo upload (Annual tier).",
+    "Saved estimate templates for Monthly and Annual subscribers.",
+    "Usage tracking limiting Free users to 3 estimates per month.",
+    "User settings page for company name and logo upload to brand PDF exports.",
+    "Dedicated Pricing page with tier comparison and Stripe payment links.",
+    "Stripe webhook integration to handle subscription status and email notifications via Resend.",
+    "No server-side estimate data retention; estimates are calculated client-side to protect privacy."
+  ],
+  "user_flow_summary": [
+    "New users land on the homepage and choose to get started free or select a paid plan, submitting their email and completing payment via Stripe before accessing the dashboard.",
+    "Authenticated users access the dashboard where they input job details, see live pricing breakdowns, and can copy or export estimates as PDFs.",
+    "Free users have a limit of 3 estimates per month and receive watermarked PDFs; paid users get unlimited estimates and clean exports.",
+    "Users can save and load estimate templates if subscribed to Monthly or Annual tiers.",
+    "Users can manage their account settings, including uploading logos for PDF branding (Annual tier only).",
+    "Password reset flow enables users to request a reset email and securely set a new password."
+  ],
+  "validation_criteria": [
+    "Landing page displays with correct branding, dark theme, animated headline, CTAs, and SEO metadata.",
+    "Signup to payment flow correctly creates user accounts and assigns subscription tiers.",
+    "Authentication flows work securely with email/password, session management, password reset, and emails sent via Resend.",
+    "Dashboard input fields calculate estimates accurately in real-time and update all pricing tiers correctly.",
+    "Copy to clipboard feature triggers appropriate feedback and copies formatted estimate data.",
+    "PDF export generates watermarked PDFs for Free tier users and clean PDFs with branding for paid users; Annual tier supports user logo inclusion.",
+    "Free tier estimate usage is limited to 3 per month, with tracking reset monthly.",
+    "Saved templates feature available and functional only for Monthly and Annual subscribers.",
+    "User settings allow company name and logo uploads with validation and access control.",
+    "Stripe webhooks correctly update subscription statuses and trigger confirmation emails.",
+    "All pages and components are fully responsive, accessible (WCAG AA+), and navigable by keyboard.",
+    "No estimate data is stored server-side to meet security and privacy policies."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "React 18",
+      "Vite",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Hono (backend)",
+      "Drizzle ORM",
+      "PostgreSQL (Neon)",
+      "Better-Auth",
+      "Stripe",
+      "TanStack Query",
+      "React Router DOM",
+      "Zod",
+      "React Hook Form",
+      "@react-pdf/renderer",
+      "Resend (email)",
+      "Framer Motion"
+    ],
+    "features": [
+      {
+        "name": "User Authentication",
+        "description": "Email/password authentication with signup, login, logout, forgot password, and reset password flows using Better-Auth",
+        "files": [
+          "src/pages/Login.tsx",
+          "src/pages/Signup.tsx",
+          "src/pages/ForgotPassword.tsx",
+          "src/pages/ResetPassword.tsx",
+          "src/lib/auth-client.ts",
+          "server/lib/auth.ts"
+        ]
+      },
+      {
+        "name": "Subscription Management",
+        "description": "Three-tier subscription system (Free, Monthly, Annual) with Stripe payment integration and usage tracking",
+        "files": [
+          "src/hooks/use-subscription.ts",
+          "src/components/subscription/SubscriptionRequired.tsx",
+          "src/components/subscription/SubscriptionBanner.tsx",
+          "src/components/subscription/SubscriptionStatusBadge.tsx",
+          "src/components/subscription/UpgradePromptDialog.tsx",
+          "server/lib/usage-tracking.ts"
+        ]
+      },
+      {
+        "name": "Quick Estimate Builder",
+        "description": "Real-time estimate calculator with equipment cost, materials cost, labor hours, labor rate, and discount percentage inputs",
+        "files": [
+          "src/components/dashboard/EstimateBuilder.tsx",
+          "src/hooks/use-debounce.ts"
+        ]
+      },
+      {
+        "name": "Saved Estimates CRUD",
+        "description": "Create, read, update, delete full estimates with client info, line items, and discount",
+        "files": [
+          "src/components/dashboard/EstimateList.tsx",
+          "src/components/dashboard/EstimateForm.tsx",
+          "src/lib/api.ts",
+          "server/index.ts",
+          "server/lib/validations.ts"
+        ]
+      },
+      {
+        "name": "PDF Export",
+        "description": "Generate and download professional PDF estimates with company branding (paid tiers) or watermark (free tier)",
+        "files": [
+          "src/hooks/use-pdf-generator.tsx",
+          "src/components/pdf/EstimatePDFDocument.tsx",
+          "server/lib/pdf-generator.ts"
+        ]
+      },
+      {
+        "name": "Copy to Clipboard",
+        "description": "Copy formatted estimate text to clipboard for sharing",
+        "files": [
+          "src/components/dashboard/EstimateBuilder.tsx"
+        ]
+      },
+      {
+        "name": "Template Save/Load",
+        "description": "Save estimate configurations as templates and load them later (paid users only)",
+        "files": [
+          "src/components/dashboard/SaveTemplateDialog.tsx",
+          "src/components/dashboard/TemplateDropdown.tsx",
+          "src/lib/api.ts"
+        ]
+      },
+      {
+        "name": "Usage Tracking",
+        "description": "Track monthly estimate usage for free tier users with 3 estimates/month limit",
+        "files": [
+          "server/lib/usage-tracking.ts",
+          "src/components/dashboard/EstimateBuilder.tsx",
+          "src/pages/Dashboard.tsx"
+        ]
+      },
+      {
+        "name": "Settings & Company Branding",
+        "description": "User settings page with company name and logo upload for PDF branding",
+        "files": [
+          "src/pages/Settings.tsx",
+          "src/components/settings/LogoUpload.tsx",
+          "server/lib/file-upload.ts"
+        ]
+      },
+      {
+        "name": "Landing Page",
+        "description": "Marketing landing page with hero section, features, pricing, and testimonials",
+        "files": [
+          "src/pages/Index.tsx",
+          "src/components/ui/animated-hero.tsx",
+          "src/components/landing/FeaturesSection.tsx",
+          "src/components/landing/PricingSection.tsx",
+          "src/components/landing/TestimonialsSection.tsx",
+          "src/components/landing/CTASection.tsx"
+        ]
+      },
+      {
+        "name": "Pricing Page",
+        "description": "Dedicated pricing page with tier comparison and Stripe payment links",
+        "files": [
+          "src/pages/Pricing.tsx"
+        ]
+      },
+      {
+        "name": "Dashboard",
+        "description": "Main user dashboard with tabs for Quick Estimate and Saved Estimates",
+        "files": [
+          "src/pages/Dashboard.tsx"
+        ]
+      },
+      {
+        "name": "Stripe Webhook Handler",
+        "description": "Handle Stripe webhook events for subscription activation and management",
+        "files": [
+          "server/index.ts"
+        ]
+      },
+      {
+        "name": "Email Service",
+        "description": "Send transactional emails for password reset, welcome, and subscription confirmation using Resend",
+        "files": [
+          "server/lib/email-service.ts"
+        ]
+      }
+    ]
+  }
+}

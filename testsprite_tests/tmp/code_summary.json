@@ -1,0 +1,149 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Shadcn/ui",
+    "Hono (backend)",
+    "Drizzle ORM",
+    "PostgreSQL (Neon)",
+    "Better-Auth",
+    "Stripe",
+    "TanStack Query",
+    "React Router DOM",
+    "Zod",
+    "React Hook Form",
+    "@react-pdf/renderer",
+    "Resend (email)",
+    "Framer Motion"
+  ],
+  "features": [
+    {
+      "name": "User Authentication",
+      "description": "Email/password authentication with signup, login, logout, forgot password, and reset password flows using Better-Auth",
+      "files": [
+        "src/pages/Login.tsx",
+        "src/pages/Signup.tsx",
+        "src/pages/ForgotPassword.tsx",
+        "src/pages/ResetPassword.tsx",
+        "src/lib/auth-client.ts",
+        "server/lib/auth.ts"
+      ]
+    },
+    {
+      "name": "Subscription Management",
+      "description": "Three-tier subscription system (Free, Monthly, Annual) with Stripe payment integration and usage tracking",
+      "files": [
+        "src/hooks/use-subscription.ts",
+        "src/components/subscription/SubscriptionRequired.tsx",
+        "src/components/subscription/SubscriptionBanner.tsx",
+        "src/components/subscription/SubscriptionStatusBadge.tsx",
+        "src/components/subscription/UpgradePromptDialog.tsx",
+        "server/lib/usage-tracking.ts"
+      ]
+    },
+    {
+      "name": "Quick Estimate Builder",
+      "description": "Real-time estimate calculator with equipment cost, materials cost, labor hours, labor rate, and discount percentage inputs",
+      "files": [
+        "src/components/dashboard/EstimateBuilder.tsx",
+        "src/hooks/use-debounce.ts"
+      ]
+    },
+    {
+      "name": "Saved Estimates CRUD",
+      "description": "Create, read, update, delete full estimates with client info, line items, and discount",
+      "files": [
+        "src/components/dashboard/EstimateList.tsx",
+        "src/components/dashboard/EstimateForm.tsx",
+        "src/lib/api.ts",
+        "server/index.ts",
+        "server/lib/validations.ts"
+      ]
+    },
+    {
+      "name": "PDF Export",
+      "description": "Generate and download professional PDF estimates with company branding (paid tiers) or watermark (free tier)",
+      "files": [
+        "src/hooks/use-pdf-generator.tsx",
+        "src/components/pdf/EstimatePDFDocument.tsx",
+        "server/lib/pdf-generator.ts"
+      ]
+    },
+    {
+      "name": "Copy to Clipboard",
+      "description": "Copy formatted estimate text to clipboard for sharing",
+      "files": [
+        "src/components/dashboard/EstimateBuilder.tsx"
+      ]
+    },
+    {
+      "name": "Template Save/Load",
+      "description": "Save estimate configurations as templates and load them later (paid users only)",
+      "files": [
+        "src/components/dashboard/SaveTemplateDialog.tsx",
+        "src/components/dashboard/TemplateDropdown.tsx",
+        "src/lib/api.ts"
+      ]
+    },
+    {
+      "name": "Usage Tracking",
+      "description": "Track monthly estimate usage for free tier users with 3 estimates/month limit",
+      "files": [
+        "server/lib/usage-tracking.ts",
+        "src/components/dashboard/EstimateBuilder.tsx",
+        "src/pages/Dashboard.tsx"
+      ]
+    },
+    {
+      "name": "Settings & Company Branding",
+      "description": "User settings page with company name and logo upload for PDF branding",
+      "files": [
+        "src/pages/Settings.tsx",
+        "src/components/settings/LogoUpload.tsx",
+        "server/lib/file-upload.ts"
+      ]
+    },
+    {
+      "name": "Landing Page",
+      "description": "Marketing landing page with hero section, features, pricing, and testimonials",
+      "files": [
+        "src/pages/Index.tsx",
+        "src/components/ui/animated-hero.tsx",
+        "src/components/landing/FeaturesSection.tsx",
+        "src/components/landing/PricingSection.tsx",
+        "src/components/landing/TestimonialsSection.tsx",
+        "src/components/landing/CTASection.tsx"
+      ]
+    },
+    {
+      "name": "Pricing Page",
+      "description": "Dedicated pricing page with tier comparison and Stripe payment links",
+      "files": [
+        "src/pages/Pricing.tsx"
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "description": "Main user dashboard with tabs for Quick Estimate and Saved Estimates",
+      "files": [
+        "src/pages/Dashboard.tsx"
+      ]
+    },
+    {
+      "name": "Stripe Webhook Handler",
+      "description": "Handle Stripe webhook events for subscription activation and management",
+      "files": [
+        "server/index.ts"
+      ]
+    },
+    {
+      "name": "Email Service",
+      "description": "Send transactional emails for password reset, welcome, and subscription confirmation using Resend",
+      "files": [
+        "server/lib/email-service.ts"
+      ]
+    }
+  ]
+}
