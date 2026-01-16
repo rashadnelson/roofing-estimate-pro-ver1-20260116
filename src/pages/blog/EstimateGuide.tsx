@@ -80,7 +80,7 @@ const EstimateGuide = () => {
         </header>
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-invert max-w-none">
+        <div className="max-w-none">
           {/* Introduction */}
           <section className="mb-10">
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
