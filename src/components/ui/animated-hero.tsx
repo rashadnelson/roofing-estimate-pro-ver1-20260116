@@ -43,7 +43,7 @@ function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold uppercase tracking-wider">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              Built for Plumbing Professionals
+              Built for Roofing Professionals
             </span>
           </motion.div>
 
@@ -61,7 +61,7 @@ function Hero() {
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-bold text-[#C41E3A]"
+                    className="absolute font-bold text-[#DC2626]"
                     initial={{ opacity: 0, y: -100 }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={
@@ -82,7 +82,7 @@ function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Create professional plumbing estimates in under a minute. 
+              Create professional roofing estimates in under a minute. 
               No more messy paperwork or lost quotes—just sharp, branded PDFs your clients will trust.
             </motion.p>
           </div>
@@ -130,15 +130,15 @@ function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="flex items-center gap-2 min-h-[44px]">
-              <FileText className="w-5 h-5 text-[#C41E3A]" />
+              <FileText className="w-5 h-5 text-[#DC2626]" />
               <span>PDF Export</span>
             </div>
             <div className="flex items-center gap-2 min-h-[44px]">
-              <Clock className="w-5 h-5 text-[#C41E3A]" />
+              <Clock className="w-5 h-5 text-[#DC2626]" />
               <span>Under 60 Seconds</span>
             </div>
             <div className="flex items-center gap-2 min-h-[44px]">
-              <Mail className="w-5 h-5 text-[#C41E3A]" />
+              <Mail className="w-5 h-5 text-[#DC2626]" />
               <span>Email to Clients</span>
             </div>
           </motion.div>

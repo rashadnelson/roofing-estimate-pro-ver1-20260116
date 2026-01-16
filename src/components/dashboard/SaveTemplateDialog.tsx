@@ -67,7 +67,7 @@ export default function SaveTemplateDialog({
       <DialogContent className="sm:max-w-md bg-[#242424] border-white/10 text-white">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-white">
-            <Save className="h-5 w-5 text-[#C41E3A]" />
+            <Save className="h-5 w-5 text-[#DC2626]" />
             Save as Template
           </DialogTitle>
           <DialogDescription className="text-white/60">
@@ -88,7 +88,7 @@ export default function SaveTemplateDialog({
                   setError(null);
                 }}
                 placeholder="e.g., Standard Bathroom Remodel"
-                className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${
+                className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${
                   error ? "border-red-500" : ""
                 }`}
                 disabled={isLoading}
@@ -115,7 +115,7 @@ export default function SaveTemplateDialog({
             <Button
               type="submit"
               disabled={isLoading || !templateName.trim()}
-              className="bg-gradient-to-r from-[#C41E3A] to-[#A01828] hover:from-[#A01828] hover:to-[#8B1523] text-white"
+              className="bg-gradient-to-r from-[#DC2626] to-[#B91C1C] hover:from-[#B91C1C] hover:to-[#991B1B] text-white"
             >
               {isLoading ? (
                 <>

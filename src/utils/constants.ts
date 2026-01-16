@@ -1,10 +1,10 @@
 /**
- * PlumbPro Estimate Brand Colors
+ * Roofing Estimate Pro Brand Colors
  */
 export const COLORS = {
   primary: {
-    crimson: '#C41E3A',
-    crimsonDark: '#A01830',
+    red: '#DC2626',
+    redLight: '#F87171',
   },
   background: {
     dark: '#1A1A1A',

@@ -7,58 +7,60 @@ import RelatedPosts from "@/components/blog/RelatedPosts";
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Plumbing Pricing Guide: How Much to Charge for Plumbing Jobs [2025]",
-  "description": "Complete pricing guide for plumbers. Learn how much to charge for common plumbing jobs, calculate your costs, and maximize profitability.",
-  "image": "https://plumbproestimate.dev/og-image.png",
+  "headline": "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]",
+  "description": "Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability.",
+  "image": "https://roofingestimatepro.dev/og-image.png",
   "author": {
     "@type": "Organization",
-    "name": "PlumbPro Estimate",
-    "url": "https://plumbproestimate.dev"
+    "name": "Roofing Estimate Pro",
+    "url": "https://roofingestimatepro.dev"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "PlumbPro Estimate",
+    "name": "Roofing Estimate Pro",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://plumbproestimate.dev/favicon.svg"
+      "url": "https://roofingestimatepro.dev/favicon.svg"
     }
   },
   "datePublished": "2025-01-01",
-  "dateModified": "2025-01-14",
+  "dateModified": "2025-01-16",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://plumbproestimate.dev/blog/pricing-guide"
+    "@id": "https://roofingestimatepro.dev/blog/pricing-guide"
   }
 };
 
 const PricingGuide = () => {
   const relatedPosts = [
     {
-      title: "How to Create Plumbing Estimates: Complete Guide for Plumbers [2025]",
+      title: "How to Create Roofing Estimates: Complete Guide for Roofers [2025]",
       slug: "estimate-guide",
-      excerpt: "Learn how to create professional plumbing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
+      excerpt: "Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
     },
     {
-      title: "Best Plumbing Estimate Templates: Free vs Paid Options [2025]",
+      title: "Best Roofing Estimate Templates: Free vs Paid Options [2025]",
       slug: "template-comparison",
-      excerpt: "Compare free plumbing estimate templates, paid options, and software solutions. Learn which option is best for your plumbing business.",
+      excerpt: "Compare free roofing estimate templates, paid options, and software solutions. Learn which option is best for your roofing business.",
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Plumbing Pricing Guide: How Much to Charge [2025] | PlumbPro</title>
+        <title>Roofing Pricing Guide: How Much to Charge [2025] | Roofing Estimate Pro</title>
         <meta 
           name="description" 
-          content="Complete pricing guide for plumbers. Learn how much to charge for common plumbing jobs, calculate your costs, and maximize profitability." 
+          content="Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability." 
         />
-        <meta property="og:title" content="Plumbing Pricing Guide: How Much to Charge [2025] | PlumbPro" />
+        <meta property="og:title" content="Roofing Pricing Guide: How Much to Charge [2025] | Roofing Estimate Pro" />
+        <meta property="og:type" content="article" />
         <meta 
           property="og:description" 
-          content="Complete pricing guide for plumbers. Learn how much to charge for common plumbing jobs, calculate your costs, and maximize profitability." 
+          content="Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability." 
         />
-        <link rel="canonical" href="https://plumbproestimate.dev/blog/pricing-guide" />
+        <meta property="og:url" content="https://roofingestimatepro.dev/blog/pricing-guide" />
+        <link rel="canonical" href="https://roofingestimatepro.dev/blog/pricing-guide" />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
@@ -68,10 +70,10 @@ const PricingGuide = () => {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground mb-4 leading-tight">
-            Plumbing Pricing Guide: How Much to Charge for Plumbing Jobs [2025]
+            Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]
           </h1>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>7 min read</span>
+            <span>12 min read</span>
             <span>•</span>
             <span>Updated January 2025</span>
           </div>
@@ -82,64 +84,61 @@ const PricingGuide = () => {
           {/* Introduction */}
           <section className="mb-10">
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Pricing your plumbing services correctly is the difference between a thriving business and barely scraping by. 
-              Charge too little, and you'll work yourself to death without making a profit. Charge too much, and you'll 
-              lose jobs to competitors. Finding that sweet spot requires understanding your true costs and the value you provide.
+              Pricing roofing jobs correctly is the difference between a profitable business and one that struggles to cover costs. 
+              Charge too little, and you work for pennies or even lose money. Charge too much, and you lose jobs to competitors. 
+              The roofing industry is highly competitive, material costs fluctuate, and homeowners have access to multiple quotes instantly.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              In this comprehensive guide, we'll break down exactly how much plumbers should charge for common jobs, how to 
-              calculate your real costs, and pricing strategies that maximize your profitability while remaining competitive.
+              In this comprehensive pricing guide, we'll break down exactly how much to charge for common roofing jobs, how to calculate 
+              your true costs, and proven pricing strategies that maximize profitability while remaining competitive.
             </p>
           </section>
 
           {/* Understanding Your Costs */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              Understanding Your True Costs
+              Understanding Your Costs as a Roofer
             </h2>
             <p className="text-muted-foreground mb-4">
-              Before you can price effectively, you need to know what it actually costs you to operate. Many plumbers only 
-              consider direct costs and wonder why they're not profitable.
+              Before you can price profitably, you must understand your actual costs. Most roofers underestimate their true overhead 
+              and end up working for far less than they think.
             </p>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Direct Costs</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Direct Costs (Labor and Materials)</h3>
                 <p className="text-muted-foreground">
-                  These are costs directly tied to each job: your labor, helper wages, materials, subcontractors, and 
-                  permits. Direct costs are easy to see because they change with every job. A water heater installation 
-                  has different direct costs than a drain cleaning.
+                  Direct costs include crew wages, shingles, underlayment, flashing, fasteners, and other materials that go directly 
+                  into the job. For a typical asphalt shingle roof, material costs run $150-200 per square wholesale. Labor costs vary 
+                  by region but average $120-180 per square including crew wages, payroll taxes, and workers' comp.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Indirect Costs (Overhead)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Indirect Costs (Insurance, Equipment, Trucks, Dumpsters)</h3>
                 <p className="text-muted-foreground">
-                  This is where most plumbers underestimate. Your overhead includes truck payments, fuel, insurance 
-                  (general liability, vehicle, workers comp), licensing and permits, tool replacement, shop/storage rent, 
-                  phone, internet, marketing, accounting, office supplies, and more. Add it all up annually—you might be 
-                  shocked.
+                  Indirect costs are where most roofers lose money. Liability insurance ($3,000-8,000/year), workers' compensation 
+                  insurance (8-15% of payroll), truck payments ($400-800/month), fuel ($500-1,500/month), equipment depreciation 
+                  (ladders, harnesses, nailers, compressors), dumpster rentals ($400-800 per job), disposal fees, licensing, and 
+                  office expenses all add up fast.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Calculate Your True Hourly Cost</h3>
-                <p className="text-muted-foreground mb-3">
-                  Here's a real example for a solo plumber:
+                <h3 className="text-xl font-semibold text-foreground mb-2">Calculate True Cost Per Square</h3>
+                <p className="text-muted-foreground">
+                  Example: 25-square asphalt shingle roof replacement. Materials: $4,000 (25 squares × $160). Labor: $3,500 (25 squares × $140). 
+                  Tear-off and disposal: $3,000 (25 squares × $120). Overhead allocation: $1,000. Total cost: $11,500. Cost per square: $460. 
+                  This is your break-even—you haven't made a dollar of profit yet.
                 </p>
-                <div className="bg-card p-4 rounded-lg border border-border text-sm">
-                  <p className="text-muted-foreground mb-2">Annual overhead: $45,000</p>
-                  <p className="text-muted-foreground mb-2">Billable hours/year: 1,500 hours (accounting for travel, admin, downtime)</p>
-                  <p className="text-muted-foreground mb-2">Overhead per hour: $45,000 ÷ 1,500 = $30/hour</p>
-                  <p className="text-muted-foreground mb-2">Desired personal wage: $40/hour</p>
-                  <p className="text-muted-foreground mb-2">Desired profit margin: 15% = $15/hour</p>
-                  <p className="text-accent font-semibold mt-3">
-                    Minimum rate to charge: $85/hour
-                  </p>
-                </div>
-                <p className="text-muted-foreground mt-3">
-                  This doesn't include materials markup. If you're charging $60/hour, you're actually losing money with 
-                  every job.
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Example: $400/Square Breakdown for Asphalt Shingle Roof</h3>
+                <p className="text-muted-foreground">
+                  Here's a realistic breakdown: Materials = $160, Labor = $140, Tear-off/Disposal = $120, Overhead = $40, Profit = $80. 
+                  Total = $540 per square selling price. This 15% profit margin ($80/$540) is typical for residential roofing and 
+                  provides a sustainable business model.
                 </p>
               </div>
             </div>
@@ -148,136 +147,164 @@ const PricingGuide = () => {
           {/* Standard Pricing */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              Standard Pricing for Common Plumbing Jobs
+              Standard Pricing for Common Roofing Jobs
             </h2>
             <p className="text-muted-foreground mb-4">
-              Here are typical price ranges for common plumbing jobs in 2025. Remember, prices vary by region, complexity, 
-              and market conditions. Use these as starting points, not absolute rules.
+              Use these industry benchmarks as starting points. Adjust for your region, roof complexity, material quality, and local 
+              market conditions.
             </p>
 
-            <div className="space-y-4 bg-card p-6 rounded-lg border border-border">
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Drain Cleaning</h3>
-                  <p className="text-sm text-muted-foreground">Simple clogs, snake service</p>
-                </div>
-                <span className="text-accent font-semibold">$150-300</span>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Asphalt Shingle Roof Replacement: $350-500 Per Square</h3>
+                <p className="text-muted-foreground">
+                  The most common residential roofing job. 3-tab shingles run $350-400 per square installed. Architectural shingles 
+                  (dimensional, laminated) run $400-500 per square installed. Includes tear-off, underlayment, ice and water shield, 
+                  drip edge, ridge caps, and all labor. Add surcharges for steep pitch, complex roof lines, or difficult access.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Toilet Repair</h3>
-                  <p className="text-sm text-muted-foreground">Flapper, fill valve, wax ring</p>
-                </div>
-                <span className="text-accent font-semibold">$150-250</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Metal Roof Installation: $700-1,200 Per Square</h3>
+                <p className="text-muted-foreground">
+                  Standing seam metal roofs command premium pricing. Materials are more expensive ($300-500/square wholesale), 
+                  installation is more technical, and lead times are longer. Corrugated metal panels run $700-900 per square. Standing 
+                  seam systems run $900-1,200 per square. Lifetime warranties and energy efficiency justify the premium.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Faucet Installation</h3>
-                  <p className="text-sm text-muted-foreground">Kitchen or bathroom, standard complexity</p>
-                </div>
-                <span className="text-accent font-semibold">$150-300</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Flat Roof Replacement: $400-800 Per Square</h3>
+                <p className="text-muted-foreground">
+                  TPO (thermoplastic polyolefin) membranes run $400-600 per square. EPDM (rubber) membranes run $400-550 per square. 
+                  Modified bitumen systems run $500-700 per square. Built-up roofing (BUR) runs $600-800 per square. Flat roof pricing 
+                  includes tear-off of existing membrane, insulation board, new membrane, and flashing.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Water Heater Installation</h3>
-                  <p className="text-sm text-muted-foreground">50-gallon tank, standard replacement</p>
-                </div>
-                <span className="text-accent font-semibold">$1,200-2,500</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Roof Repair (Small): $300-800</h3>
+                <p className="text-muted-foreground">
+                  Minor repairs like replacing damaged shingles, resealing flashing, or fixing small leaks typically run $300-800 
+                  depending on complexity and materials. Set a minimum service call charge ($150-300) to cover truck roll and diagnostics. 
+                  Don't undersell small repairs—they're profit opportunities and lead generators.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Pipe Repair</h3>
-                  <p className="text-sm text-muted-foreground">Leak repair, small section replacement</p>
-                </div>
-                <span className="text-accent font-semibold">$200-500</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Tear-Off Service: $100-150 Per Square</h3>
+                <p className="text-muted-foreground">
+                  Tear-off and disposal is often quoted separately. Includes labor to tear off existing roof, load debris, dumpster 
+                  rental, and dump fees. Single layer tear-off runs $100-120 per square. Double layer tear-off runs $140-160 per square. 
+                  Slate or tile removal costs significantly more ($200-300/square) due to weight and difficulty.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Sewer Line Repair</h3>
-                  <p className="text-sm text-muted-foreground">Trenching, pipe replacement, 20-30 feet</p>
-                </div>
-                <span className="text-accent font-semibold">$1,500-5,000</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Gutter Installation: $800-1,500</h3>
+                <p className="text-muted-foreground">
+                  Seamless aluminum gutters run $8-12 per linear foot installed. Average home (150-200 linear feet) runs $1,200-2,400. 
+                  Copper gutters run $25-40 per linear foot. Include downspouts ($80-120 each), end caps, corners, and hangers in your 
+                  pricing. Gutter guards add $8-15 per linear foot.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start pb-3 border-b border-border">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Fixture Replacement</h3>
-                  <p className="text-sm text-muted-foreground">Sink, toilet, or tub replacement</p>
-                </div>
-                <span className="text-accent font-semibold">$200-600</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Skylight Installation: $1,000-2,500</h3>
+                <p className="text-muted-foreground">
+                  New skylight installation including cutting roof opening, framing, flashing, and skylight unit runs $1,000-2,500 
+                  depending on size and complexity. Skylight replacement (using existing opening) runs $500-1,200. Always use 
+                  manufacturer-approved flashing kits to prevent leaks and maintain warranties.
+                </p>
               </div>
 
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">Leak Detection</h3>
-                  <p className="text-sm text-muted-foreground">Finding hidden leaks, camera inspection</p>
-                </div>
-                <span className="text-accent font-semibold">$150-400</span>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Roof Inspection: $150-400</h3>
+                <p className="text-muted-foreground">
+                  Professional roof inspections with written reports, photos, and condition assessments run $150-400. Insurance claim 
+                  inspections may command premium pricing. Offer free inspections for qualified leads (potential full roof replacement) 
+                  but charge for standalone inspection services to cover your time.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Note: Prices Vary by Region, Pitch, Material, and Accessibility</h3>
+                <p className="text-muted-foreground">
+                  All pricing above is general guidance. Adjust for your local market: California and Northeast command 20-40% higher 
+                  pricing than Southeast or Midwest due to labor costs and cost of living. Complex roof designs, steep pitch, height, 
+                  and difficult access all increase pricing significantly. Always quote based on your actual costs and market conditions.
+                </p>
               </div>
             </div>
-
-            <p className="text-muted-foreground text-sm mt-4 italic">
-              Note: Prices vary significantly by region. Urban areas like San Francisco or New York may be 30-50% higher, 
-              while rural areas may be 20-30% lower. These ranges assume standard complexity—difficult access, old buildings, 
-              or code upgrades will increase costs.
-            </p>
           </section>
 
           {/* Pricing Strategies */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              Pricing Strategies That Work
+              Pricing Strategies That Work for Roofers
             </h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Flat-Rate vs Hourly Pricing</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Per-Square Pricing vs Fixed-Price Bids</h3>
                 <p className="text-muted-foreground">
-                  Flat-rate pricing (fixed price per job) is increasingly popular because customers prefer knowing the 
-                  total cost upfront. It also rewards efficiency—if you complete a job faster than expected, you keep the 
-                  full amount. Hourly pricing works better for unpredictable jobs like troubleshooting or repairs where 
-                  scope is unclear. Many plumbers use flat rates for common jobs and hourly for diagnostics and custom work.
+                  Per-square pricing is transparent and easy for customers to understand: "$450/square × 25 squares = $11,250." 
+                  Fixed-price bids ($12,500 total) are simpler but less transparent. Most roofers use per-square pricing for estimates 
+                  but present a fixed total price. This allows you to show detailed breakdowns while providing pricing certainty.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Service Call Minimums</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Tear-Off Included or Separate Line Item</h3>
                 <p className="text-muted-foreground">
-                  Always set a minimum charge for showing up, typically $150-250. This covers your drive time, diagnostics, 
-                  and the opportunity cost of not being available for other jobs. Without minimums, you'll waste time on 
-                  unprofitable small jobs. Customers understand and accept reasonable service call fees.
+                  List tear-off as a separate line item. This transparency shows homeowners exactly what they're paying for and makes 
+                  it easier to handle multiple layers (charge more for second layer). Bundling tear-off into the per-square price 
+                  hides costs and makes your pricing harder to justify compared to competitors.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Emergency Premiums</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Pitch Multipliers (Increase Price for 7/12+ Pitch)</h3>
                 <p className="text-muted-foreground">
-                  Charge significantly more for after-hours, weekend, and holiday emergencies. A 1.5x to 2x multiplier is 
-                  standard and justified. You're sacrificing family time and personal plans. Customers in plumbing 
-                  emergencies are willing to pay premium rates for immediate service.
+                  Apply pitch multipliers clearly: Standard pitch (4/12 to 6/12) = base price. Steep pitch (7/12 to 9/12) = 15-25% 
+                  surcharge. Very steep pitch (10/12+) = 30-40% surcharge. Document the pitch in your estimate with a measurement or 
+                  photo. Customers understand that steep roofs are more dangerous and time-consuming.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Warranty and Maintenance Plans</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Material Upgrade Options (Architectural vs 3-Tab Shingles)</h3>
                 <p className="text-muted-foreground">
-                  Offer extended warranties or annual maintenance plans for recurring revenue. A $199/year plan might include 
-                  annual inspections, priority scheduling, and discounts on repairs. This creates steady cash flow and builds 
-                  long-term customer relationships.
+                  Offer tiered material options: Good (3-tab shingles, 20-25 year warranty), Better (architectural shingles, 30-50 year 
+                  warranty), Best (premium designer shingles or metal, lifetime warranty). Present three options with pricing. Most 
+                  customers choose the middle option, and some upgrade to premium. This strategy increases average job value.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Volume Discounts</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Seasonal Pricing Considerations (High Season vs Off-Season)</h3>
                 <p className="text-muted-foreground">
-                  For large projects or property managers with multiple units, offer modest volume discounts (10-15%). You'll 
-                  save time by working in one location, and the guaranteed volume justifies lower per-unit pricing. Just 
-                  ensure you're still profitable after the discount.
+                  Spring and summer are high season for roofing—demand is high, schedules are full. Consider 5-10% premium pricing 
+                  during peak season. Fall and winter are slower—offer 5-10% discounts to keep crews busy during off-season. Balance 
+                  profitability with maintaining cash flow year-round.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Insurance Work Pricing (Document Everything)</h3>
+                <p className="text-muted-foreground">
+                  Insurance claims require detailed documentation: photos of damage, line-item estimates matching insurance adjuster 
+                  terminology (squares, linear feet), and thorough scope of work. Don't discount insurance work—adjusters approve 
+                  reasonable pricing. Document all damage discovered during tear-off with photos to support supplemental claims.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Warranty Package Pricing</h3>
+                <p className="text-muted-foreground">
+                  Offer extended labor warranties as upgrade options: Standard (1-year labor warranty), Premium (5-year labor warranty, 
+                  +$500), Elite (10-year labor warranty, +$1,200). Extended warranties increase perceived value, provide recurring 
+                  revenue, and differentiate you from competitors who offer minimal warranties.
                 </p>
               </div>
             </div>
@@ -286,52 +313,70 @@ const PricingGuide = () => {
           {/* How to Present Pricing */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              How to Present Your Pricing
+              How to Present Your Roofing Pricing
             </h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Provide Itemized Breakdowns</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Break Down by Squares for Transparency</h3>
                 <p className="text-muted-foreground">
-                  Don't just give a single number. Break down labor, materials, permits, and other costs. Transparency 
-                  builds trust and helps customers understand what they're paying for. It also makes it harder for them 
-                  to negotiate on price when they see all the components.
+                  Show per-square calculations clearly: "25 squares × $450/square = $11,250 for roofing materials and installation." 
+                  Then add tear-off, permits, and other line items. Transparency builds trust and makes it easier to justify pricing 
+                  when competitors provide vague "total price only" bids.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Explain the Value</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Explain Material Choices (Good/Better/Best)</h3>
                 <p className="text-muted-foreground">
-                  Don't just quote a price—explain what's included. Mention your warranty, licensed and insured status, 
-                  years of experience, and quality of materials. Customers need to understand why your price might be 
-                  higher than a handyman charging $40/hour.
+                  Don't just list "architectural shingles." Explain the difference: "30-year architectural shingles with algae resistance 
+                  vs basic 3-tab shingles. Better wind rating, better curb appeal, longer warranty." Help customers understand what 
+                  they're paying for and why the upgrade is worth it.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Offer Good/Better/Best Options</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Show Tear-Off, Materials, Labor Separately</h3>
                 <p className="text-muted-foreground">
-                  Present three pricing tiers when possible. Good = basic solution, meets minimum requirements. Better = 
-                  standard solution with better materials or warranty. Best = premium solution with top-tier fixtures and 
-                  extended warranty. Most customers choose the middle option, but some upgrade to best.
+                  Itemize major cost categories: Tear-off and disposal ($3,000), Roofing materials ($4,500), Labor and installation 
+                  ($3,500), Permits and inspections ($250), Total: $11,250. Clear line items show homeowners exactly where their money 
+                  goes and prevent "why is this so expensive?" objections.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">State Clear Payment Terms</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Highlight Warranty Coverage</h3>
                 <p className="text-muted-foreground">
-                  Specify when payment is due. For small jobs, payment on completion is standard. Large jobs often require 
-                  a deposit (25-50%) upfront and final payment on completion. Accept multiple payment methods (cash, check, 
-                  credit cards, digital payments) to make it easy.
+                  Prominently display your labor warranty and manufacturer's material warranty: "Your roof includes a 5-year labor 
+                  warranty on workmanship and a 50-year limited manufacturer warranty on shingles." Warranties build confidence and 
+                  justify premium pricing over unlicensed competitors with no warranty.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Be Confident in Your Pricing</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Include Timeline and Weather Considerations</h3>
                 <p className="text-muted-foreground">
-                  Don't apologize for your rates or immediately offer discounts. If you've calculated your costs correctly 
-                  and provide good service, your pricing is fair. Confidence in your pricing signals confidence in your 
-                  work. Customers respect plumbers who value their expertise.
+                  Set realistic timelines: "Project scheduled for [date]. Expected completion in 2-3 days weather permitting. Rain 
+                  delays may extend timeline." Homeowners appreciate honesty about weather dependency and understand that roofing can't 
+                  happen in the rain.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Payment Terms (Deposit, Completion, Final Inspection)</h3>
+                <p className="text-muted-foreground">
+                  Clearly state payment terms: "25% deposit due upon contract signing. 50% due when materials are delivered. 25% due 
+                  upon completion and final inspection." Define what "completion" means: debris removed, roof inspected, customer 
+                  walkthrough complete. Clear terms prevent payment disputes.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Be Confident - You're Providing Protection and Peace of Mind</h3>
+                <p className="text-muted-foreground">
+                  Don't apologize for your pricing. You're not selling shingles—you're selling protection from the elements, peace of 
+                  mind, and a beautiful home exterior. Stand behind your pricing confidently. Customers respect confidence and expertise. 
+                  If you seem unsure about your prices, customers will negotiate aggressively.
                 </p>
               </div>
             </div>
@@ -339,15 +384,11 @@ const PricingGuide = () => {
 
           {/* Conclusion */}
           <section className="mb-10">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Pricing plumbing services correctly is crucial to your business success. It's not just about covering costs—
-              it's about valuing your time, expertise, and the risk you take as a business owner. Don't compete on price 
-              alone. Compete on quality, reliability, and professionalism.
-            </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Review your pricing annually. As your costs increase (insurance, fuel, materials), your rates need to increase 
-              too. And remember: losing a job because you're "too expensive" often means you dodged a problem customer. The 
-              right customers understand that quality work costs money.
+              Pricing roofing jobs profitably requires understanding your true costs, using proven pricing strategies, and presenting 
+              prices with confidence and transparency. Start with industry benchmarks, adjust for your market and costs, and never 
+              apologize for charging what you're worth. The roofers who price confidently and present professionally win more jobs at 
+              better margins than those who race to the bottom on price.
             </p>
           </section>
         </div>

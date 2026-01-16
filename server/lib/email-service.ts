@@ -6,7 +6,7 @@ import { Resend } from "resend";
 
 // Initialize Resend client
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
-const fromEmail = process.env.RESEND_FROM_EMAIL || "noreply@plumbproestimate.dev";
+const fromEmail = process.env.RESEND_FROM_EMAIL || "noreply@roofingestimatepro.dev";
 const frontendUrl = process.env.FRONTEND_URL || "http://localhost:8085";
 
 // Email sending configuration
@@ -141,9 +141,9 @@ function getEmailTemplate(content: string, unsubscribeUrl?: string): string {
               <table role="presentation" class="email-container" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #1A1A1A; border-radius: 12px; overflow: hidden;">
                 <!-- Header -->
                 <tr>
-                  <td class="email-content" style="background: linear-gradient(135deg, #C41E3A 0%, #A01830 100%); padding: 40px 30px; text-align: center;">
+                  <td class="email-content" style="background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%); padding: 40px 30px; text-align: center;">
                     <h1 style="color: #FFFFFF; margin: 0; font-size: 32px; font-weight: bold; letter-spacing: -0.5px;">
-                      PlumbPro Estimate
+                      Roofing Estimate Pro
                     </h1>
                   </td>
                 </tr>
@@ -158,7 +158,7 @@ function getEmailTemplate(content: string, unsubscribeUrl?: string): string {
                   <td class="email-content" style="background-color: #2A2A2A; padding: 30px; border-top: 1px solid #3A3A3A;">
                     ${unsubscribeSection}
                     <p class="email-muted" style="color: #9CA3AF; font-size: 12px; text-align: center; margin: 0;">
-                      © ${currentYear} PlumbPro Estimate. All rights reserved.<br>
+                      © ${currentYear} Roofing Estimate Pro. All rights reserved.<br>
                       <a href="${frontendUrl}" style="color: #9CA3AF; text-decoration: none;">${frontendUrl.replace(/^https?:\/\//, '')}</a>
                     </p>
                   </td>
@@ -189,7 +189,7 @@ export async function sendPasswordResetEmail(
       We received a request to reset your password. Click the button below to create a new password:
     </p>
     <div style="text-align: center; margin: 40px 0;">
-      <a href="${resetUrl}" style="background-color: #C41E3A; color: #FFFFFF; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block; transition: background-color 0.2s;">
+      <a href="${resetUrl}" style="background-color: #DC2626; color: #FFFFFF; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block; transition: background-color 0.2s;">
         Reset Password
       </a>
     </div>
@@ -208,7 +208,7 @@ export async function sendPasswordResetEmail(
   const result = await sendEmailWithRetry({
     from: fromEmail,
     to: userEmail,
-    subject: "Reset your PlumbPro Estimate password",
+    subject: "Reset your Roofing Estimate Pro password",
     html,
   });
 
@@ -229,14 +229,14 @@ export async function sendWelcomeEmail(
   userName: string | null
 ): Promise<EmailResult> {
   const content = `
-    <h2 style="color: #FFFFFF; margin-top: 0; font-size: 24px; font-weight: 600;">Welcome to PlumbPro Estimate!</h2>
+    <h2 style="color: #FFFFFF; margin-top: 0; font-size: 24px; font-weight: 600;">Welcome to Roofing Estimate Pro!</h2>
     <p class="email-text" style="color: #E5E7EB; font-size: 16px; line-height: 1.6; margin: 20px 0;">
       Hi ${userName || "there"},
     </p>
     <p class="email-text" style="color: #E5E7EB; font-size: 16px; line-height: 1.6; margin: 20px 0;">
-      Welcome to PlumbPro Estimate! We're excited to help you create professional plumbing estimates in under 60 seconds.
+      Welcome to Roofing Estimate Pro! We're excited to help you create professional roofing estimates in under 60 seconds.
     </p>
-    <div style="background-color: #1A1A1A; border-left: 4px solid #C41E3A; padding: 20px; margin: 30px 0; border-radius: 4px;">
+    <div style="background-color: #1A1A1A; border-left: 4px solid #DC2626; padding: 20px; margin: 30px 0; border-radius: 4px;">
       <h3 style="color: #FFFFFF; margin-top: 0; font-size: 18px; font-weight: 600;">Get Started:</h3>
       <ul style="color: #E5E7EB; font-size: 16px; line-height: 1.8; padding-left: 20px; margin: 10px 0;">
         <li>Create your first estimate in seconds</li>
@@ -245,12 +245,12 @@ export async function sendWelcomeEmail(
       </ul>
     </div>
     <div style="text-align: center; margin: 40px 0;">
-      <a href="${frontendUrl}/dashboard" style="background-color: #C41E3A; color: #FFFFFF; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block;">
+      <a href="${frontendUrl}/dashboard" style="background-color: #DC2626; color: #FFFFFF; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block;">
         Go to Dashboard
       </a>
     </div>
     <p class="email-muted" style="color: #9CA3AF; font-size: 14px; line-height: 1.6; margin: 20px 0;">
-      If you have any questions, feel free to reach out to our support team at <a href="mailto:support@plumbproestimate.dev" style="color: #C41E3A; text-decoration: none;">support@plumbproestimate.dev</a>.
+      If you have any questions, feel free to reach out to our support team at <a href="mailto:support@roofingestimatepro.dev" style="color: #DC2626; text-decoration: none;">support@roofingestimatepro.dev</a>.
     </p>
   `;
 
@@ -261,7 +261,7 @@ export async function sendWelcomeEmail(
   const result = await sendEmailWithRetry({
     from: fromEmail,
     to: userEmail,
-    subject: "Welcome to PlumbPro Estimate!",
+    subject: "Welcome to Roofing Estimate Pro!",
     html,
   });
 
@@ -296,7 +296,7 @@ export async function sendSubscriptionConfirmationEmail(
       Hi ${userName || "there"},
     </p>
     <p class="email-text" style="color: #E5E7EB; font-size: 16px; line-height: 1.6; margin: 20px 0;">
-      Thank you for subscribing to PlumbPro Estimate! Your ${tierName} subscription is now active.
+      Thank you for subscribing to Roofing Estimate Pro! Your ${tierName} subscription is now active.
     </p>
     <div style="background-color: #1A1A1A; border: 1px solid #3A3A3A; padding: 24px; margin: 30px 0; border-radius: 8px;">
       <table role="presentation" style="width: 100%; border-collapse: collapse;">
@@ -314,7 +314,7 @@ export async function sendSubscriptionConfirmationEmail(
         </tr>
       </table>
     </div>
-    <div style="background-color: #1A1A1A; border-left: 4px solid #C41E3A; padding: 20px; margin: 30px 0; border-radius: 4px;">
+    <div style="background-color: #1A1A1A; border-left: 4px solid #DC2626; padding: 20px; margin: 30px 0; border-radius: 4px;">
       <h3 style="color: #FFFFFF; margin-top: 0; font-size: 18px; font-weight: 600;">What's Included:</h3>
       <ul style="color: #E5E7EB; font-size: 16px; line-height: 1.8; padding-left: 20px; margin: 10px 0;">
         <li>Unlimited estimates</li>
@@ -325,12 +325,12 @@ export async function sendSubscriptionConfirmationEmail(
       </ul>
     </div>
     <div style="text-align: center; margin: 40px 0;">
-      <a href="${frontendUrl}/dashboard" style="background-color: #C41E3A; color: #FFFFFF; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block;">
+      <a href="${frontendUrl}/dashboard" style="background-color: #DC2626; color: #FFFFFF; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; display: inline-block;">
         Start Creating Estimates
       </a>
     </div>
     <p class="email-muted" style="color: #9CA3AF; font-size: 14px; line-height: 1.6; margin: 20px 0;">
-      You can manage your subscription anytime from your <a href="${frontendUrl}/settings" style="color: #C41E3A; text-decoration: none;">account settings</a>.
+      You can manage your subscription anytime from your <a href="${frontendUrl}/settings" style="color: #DC2626; text-decoration: none;">account settings</a>.
     </p>
   `;
 
@@ -342,7 +342,7 @@ export async function sendSubscriptionConfirmationEmail(
   const result = await sendEmailWithRetry({
     from: fromEmail,
     to: userEmail,
-    subject: `Welcome to PlumbPro Estimate ${tierName} Plan!`,
+    subject: `Welcome to Roofing Estimate Pro ${tierName} Plan!`,
     html,
   });
 

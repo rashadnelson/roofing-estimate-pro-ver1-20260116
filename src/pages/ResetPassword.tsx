@@ -203,7 +203,7 @@ const ResetPassword = () => {
                           aria-required="true"
                           aria-invalid={!!form.formState.errors.password}
                           aria-describedby={form.formState.errors.password ? "password-error password-help" : "password-help"}
-                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                         />
                       </FormControl>
                       <FormMessage id="password-error" />
@@ -230,7 +230,7 @@ const ResetPassword = () => {
                           aria-required="true"
                           aria-invalid={!!form.formState.errors.confirmPassword}
                           aria-describedby={form.formState.errors.confirmPassword ? "confirmPassword-error" : undefined}
-                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                         />
                       </FormControl>
                       <FormMessage id="confirmPassword-error" />

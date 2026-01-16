@@ -7,58 +7,60 @@ import RelatedPosts from "@/components/blog/RelatedPosts";
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "How to Create Plumbing Estimates: Complete Guide for Plumbers [2025]",
-  "description": "Learn how to create professional plumbing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
-  "image": "https://plumbproestimate.dev/og-image.png",
+  "headline": "How to Create Roofing Estimates: Complete Guide for Roofers [2025]",
+  "description": "Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
+  "image": "https://roofingestimatepro.dev/og-image.png",
   "author": {
     "@type": "Organization",
-    "name": "PlumbPro Estimate",
-    "url": "https://plumbproestimate.dev"
+    "name": "Roofing Estimate Pro",
+    "url": "https://roofingestimatepro.dev"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "PlumbPro Estimate",
+    "name": "Roofing Estimate Pro",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://plumbproestimate.dev/favicon.svg"
+      "url": "https://roofingestimatepro.dev/favicon.svg"
     }
   },
   "datePublished": "2025-01-01",
-  "dateModified": "2025-01-14",
+  "dateModified": "2025-01-16",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://plumbproestimate.dev/blog/estimate-guide"
+    "@id": "https://roofingestimatepro.dev/blog/estimate-guide"
   }
 };
 
 const EstimateGuide = () => {
   const relatedPosts = [
     {
-      title: "Plumbing Pricing Guide: How Much to Charge for Plumbing Jobs [2025]",
+      title: "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]",
       slug: "pricing-guide",
-      excerpt: "Complete pricing guide for plumbers. Learn how much to charge for common plumbing jobs, calculate your costs, and maximize profitability.",
+      excerpt: "Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability.",
     },
     {
-      title: "Best Plumbing Estimate Templates: Free vs Paid Options [2025]",
+      title: "Best Roofing Estimate Templates: Free vs Paid Options [2025]",
       slug: "template-comparison",
-      excerpt: "Compare free plumbing estimate templates, paid options, and software solutions. Learn which option is best for your plumbing business.",
+      excerpt: "Compare free roofing estimate templates, paid options, and software solutions. Learn which option is best for your roofing business.",
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>How to Create Plumbing Estimates: Complete Guide [2025] | PlumbPro</title>
+        <title>How to Create Roofing Estimates: Complete Guide [2025] | Roofing Estimate Pro</title>
         <meta 
           name="description" 
-          content="Learn how to create professional plumbing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid." 
+          content="Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid." 
         />
-        <meta property="og:title" content="How to Create Plumbing Estimates: Complete Guide [2025] | PlumbPro" />
+        <meta property="og:title" content="How to Create Roofing Estimates: Complete Guide [2025] | Roofing Estimate Pro" />
+        <meta property="og:type" content="article" />
         <meta 
           property="og:description" 
-          content="Learn how to create professional plumbing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid." 
+          content="Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid." 
         />
-        <link rel="canonical" href="https://plumbproestimate.dev/blog/estimate-guide" />
+        <meta property="og:url" content="https://roofingestimatepro.dev/blog/estimate-guide" />
+        <link rel="canonical" href="https://roofingestimatepro.dev/blog/estimate-guide" />
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
@@ -68,10 +70,10 @@ const EstimateGuide = () => {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground mb-4 leading-tight">
-            How to Create Plumbing Estimates: Complete Guide for Plumbers [2025]
+            How to Create Roofing Estimates: Complete Guide for Roofers [2025]
           </h1>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>8 min read</span>
+            <span>10 min read</span>
             <span>•</span>
             <span>Updated January 2025</span>
           </div>
@@ -82,14 +84,14 @@ const EstimateGuide = () => {
           {/* Introduction */}
           <section className="mb-10">
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              As a plumber, your estimate is often the first professional impression you make on a potential customer. 
-              A detailed, accurate estimate doesn't just win you jobs—it sets expectations, builds trust, and protects 
-              your business from scope creep and disputes.
+              As a roofer, your estimate is often the first professional impression you make on a potential customer. 
+              A detailed, accurate roofing estimate doesn't just win you jobs—it sets expectations, protects your margins, 
+              and prevents disputes over hidden costs like deck repairs or disposal fees.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Yet many plumbers struggle with creating estimates that are both comprehensive and professional. Too vague, 
-              and you risk losing money. Too detailed, and you overwhelm the customer. In this guide, we'll show you 
-              exactly how to create plumbing estimates that strike the perfect balance and help you win more jobs at 
+              Yet many roofers struggle with creating estimates that are both comprehensive and professional. Miss the tear-off 
+              costs, and you lose money. Forget to account for pitch multipliers, and your labor estimate is way off. In this guide, 
+              we'll show you exactly how to create roofing estimates that strike the perfect balance and help you win more jobs at 
               profitable rates.
             </p>
           </section>
@@ -97,73 +99,81 @@ const EstimateGuide = () => {
           {/* What to Include */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              What to Include in a Plumbing Estimate
+              What to Include in a Roofing Estimate
             </h2>
             <p className="text-muted-foreground mb-4">
-              Every professional plumbing estimate should include these essential components:
+              Every professional roofing estimate should include these essential components:
             </p>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Labor Costs</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Labor Costs (Per Square)</h3>
                 <p className="text-muted-foreground">
-                  Break down the hours you expect the job to take and your hourly rate. If you work with a helper or 
-                  apprentice, list their rate separately. Be realistic—underestimating labor is the #1 way plumbers 
-                  lose money. Include time for setup, cleanup, and unexpected complications.
+                  Break down labor by the number of squares, crew size, and expected project duration. Account for roof pitch—steep 
+                  roofs (7/12 or greater) require more time and safety equipment. Include setup, tear-off labor, installation, cleanup, 
+                  and dumpster loading. Don't forget to factor in weather delays or unexpected deck repairs.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Materials and Fixtures</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Materials (Shingles, Underlayment, Flashing)</h3>
                 <p className="text-muted-foreground">
-                  List every significant material: pipes, fittings, fixtures, solder, sealants, and more. Include brand 
-                  names and model numbers when possible. Don't forget small items like screws, washers, and tape—they 
-                  add up. Apply a standard markup (typically 20-30%) to cover storage, transportation, and handling.
+                  List all materials by square: shingles (architectural vs 3-tab), underlayment (synthetic or felt), ice and water shield, 
+                  drip edge, flashing, ridge caps, vents, and fasteners. Include brand names and product lines. Always add a 10% waste 
+                  factor for cuts and errors. Apply a standard markup (typically 20-30%) to cover transportation, storage, and handling.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Equipment Rental</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Tear-Off and Disposal Costs</h3>
                 <p className="text-muted-foreground">
-                  If you need to rent specialized equipment like a sewer camera, hydro-jetter, or excavator, include 
-                  these costs in your estimate. Even if you own the equipment, consider charging a usage fee to cover 
-                  maintenance and depreciation.
+                  One of the most commonly forgotten items. Include dumpster rental, haul-away fees, and labor for tear-off. 
+                  Typical pricing is $100-150 per square for tear-off and disposal. For multiple layers, charge accordingly. 
+                  Document the number of existing layers in your estimate to avoid disputes.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Permits and Fees</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Permits and Inspection Fees</h3>
                 <p className="text-muted-foreground">
-                  Many plumbing jobs require permits. Always include permit costs in your estimate, plus a markup for 
-                  your time to obtain them. If inspection fees are required, include those too. Being upfront about 
-                  permits shows professionalism and protects you legally.
+                  Most roofing jobs require permits. Include permit costs plus a markup for your time to obtain them. If inspection 
+                  fees are required, list those separately. Being upfront about permits shows professionalism, protects you legally, 
+                  and prevents surprises for the homeowner.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Disposal Costs</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Roof Deck Repairs (Contingency)</h3>
                 <p className="text-muted-foreground">
-                  Don't forget to charge for hauling away old fixtures, cutting out pipes, or disposing of hazardous 
-                  materials. Dump fees, transportation, and labor all cost money. A typical disposal charge ranges from 
-                  $50-200 depending on the job.
+                  You won't know the deck condition until tear-off, but address it upfront. Include language like "Deck repairs billed 
+                  separately at $X per sheet if rot or damage is discovered." Provide a per-sheet price for plywood or OSB replacement. 
+                  This transparency prevents scope creep disputes.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Timeline</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Accessories (Gutters, Downspouts, Skylights)</h3>
                 <p className="text-muted-foreground">
-                  Provide a realistic timeline for when work will begin and how long it will take. Include contingencies 
-                  for weather delays or supply chain issues. Clear timelines prevent customer frustration and help you 
-                  schedule other jobs effectively.
+                  If the project includes gutters, downspouts, skylight flashing, or chimney cricket installation, itemize these 
+                  separately. Each accessory has its own material and labor costs. Transparent pricing builds trust.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Warranty Information</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Timeline and Scheduling</h3>
                 <p className="text-muted-foreground">
-                  State your warranty clearly. Most plumbers offer 1-2 years on labor and pass through manufacturer 
-                  warranties on fixtures and equipment. Clarify what's covered and what's not. A good warranty builds 
-                  confidence and differentiates you from competitors.
+                  Provide a realistic timeline: when work will begin, how many days on-site, and completion date. Always include 
+                  contingencies for weather delays—roofing is weather-dependent. Clear timelines prevent customer frustration and 
+                  help you schedule other jobs effectively.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Warranty Information (Labor and Materials)</h3>
+                <p className="text-muted-foreground">
+                  State your labor warranty clearly (typically 1-5 years) and pass through manufacturer warranties on shingles 
+                  (often 25-50 years limited). Clarify what's covered—workmanship, leaks—and what's not, like storm damage or 
+                  improper maintenance. A strong warranty builds confidence and differentiates you from competitors.
                 </p>
               </div>
             </div>
@@ -172,64 +182,82 @@ const EstimateGuide = () => {
           {/* How to Price */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              How to Price Plumbing Jobs
+              How to Price Roofing Jobs
             </h2>
             <p className="text-muted-foreground mb-4">
-              Pricing is part art, part science. Here's how to calculate rates that keep you profitable:
+              Pricing roofing jobs correctly is critical for profitability. Here's how to calculate rates that keep you competitive 
+              and profitable:
             </p>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Standard Labor Rates</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Industry Standard Pricing Per Square</h3>
                 <p className="text-muted-foreground">
-                  Most independent plumbers charge between $75-125 per hour, depending on location, experience, and 
-                  specialization. Urban areas and commercial work typically command higher rates. Emergency calls and 
-                  after-hours work should be 1.5-2x your standard rate.
+                  Asphalt shingle roofs typically range from $350-500 per square installed, depending on pitch, material quality 
+                  (architectural vs 3-tab), and region. Metal roofs run $700-1,200 per square. Flat roofs average $400-800 per square. 
+                  Urban areas and complex roof designs command higher rates.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Material Markup</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Material Costs and Markup</h3>
                 <p className="text-muted-foreground">
-                  Apply a 20-30% markup on all materials. This covers the time you spend sourcing materials, 
-                  transportation, storage, and the risk of ordering wrong items. Don't be shy about this—every 
-                  contractor does it, and customers expect it.
+                  Calculate your wholesale cost for all materials, then apply a 20-30% markup. This covers ordering time, 
+                  transportation, storage, risk of damaged materials, and restocking fees. Track material costs closely—shingle 
+                  prices fluctuate with oil prices.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Overhead Calculation</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Labor Calculation (Crew Efficiency and Pitch)</h3>
                 <p className="text-muted-foreground">
-                  Your overhead includes truck payments, insurance, licensing, tools, marketing, office expenses, and 
-                  more. Calculate your annual overhead and divide by billable hours to find your overhead per hour. 
-                  Add this to your base labor rate to ensure you're covering all business costs.
+                  Calculate labor based on crew size, squares per day, and pitch multipliers. A standard 3-person crew can install 
+                  25-35 squares per day on a simple 4/12 pitch roof. Steep roofs (7/12+) slow production by 25-40%. Account for 
+                  tear-off time separately—usually 1 day for most residential jobs.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Profit Margins</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Overhead Calculation (Insurance, Equipment, Trucks)</h3>
                 <p className="text-muted-foreground">
-                  After covering labor, materials, and overhead, you need profit. Aim for 15-25% net profit margin. 
-                  This isn't greedy—it's what you need to reinvest in your business, buy new equipment, handle slow 
-                  periods, and build long-term stability.
+                  Your overhead includes liability insurance, workers' comp, truck payments, tool depreciation, equipment rental 
+                  (lifts, scaffolding), licensing, and office expenses. Calculate your annual overhead and divide by billable squares 
+                  to find your overhead per square. Add this to your labor rate.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Service Call Minimums</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Profit Margins (15-25%)</h3>
                 <p className="text-muted-foreground">
-                  Set a minimum charge for any service call, typically $150-250. This covers your time to drive to the 
-                  job, diagnose the problem, and provide an estimate. Without a minimum, you lose money on small jobs 
-                  that waste your day.
+                  After covering labor, materials, and overhead, you need profit. Aim for 15-25% net profit margin. This isn't 
+                  greedy—it's what you need to reinvest in equipment, handle slow seasons, cover callbacks, and build long-term 
+                  business stability.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Emergency Rates</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Tear-Off Pricing ($100-150/Square)</h3>
                 <p className="text-muted-foreground">
-                  Emergency calls at night, weekends, or holidays should command premium pricing. Double your standard 
-                  rate isn't unreasonable—you're sacrificing personal time and family commitments. Customers expect to 
-                  pay more for emergency service.
+                  Tear-off and disposal is typically priced at $100-150 per square. This includes dumpster rental ($400-800), 
+                  labor to tear off and load debris, and dump fees. For roofs with multiple layers, charge extra—double layers 
+                  take significantly more time and dumpster space.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Steep Pitch Surcharges</h3>
+                <p className="text-muted-foreground">
+                  Roofs with a 7/12 pitch or steeper require additional safety equipment, slower installation, and increased risk. 
+                  Apply a 15-30% surcharge to both labor and time estimates. Document the pitch in your estimate so customers 
+                  understand the pricing.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Accessibility and Height Factors</h3>
+                <p className="text-muted-foreground">
+                  Multi-story homes, limited access, and challenging site conditions increase costs. If you need scaffolding, lifts, 
+                  or extra safety measures, include those costs explicitly. Difficult access can add 10-20% to the total price.
                 </p>
               </div>
             </div>
@@ -241,52 +269,67 @@ const EstimateGuide = () => {
               Common Mistakes to Avoid
             </h2>
             <p className="text-muted-foreground mb-4">
-              Learn from these costly mistakes that trip up even experienced plumbers:
+              Learn from these costly mistakes that trip up even experienced roofers:
             </p>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Underestimating Labor</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Underestimating Squares Needed</h3>
                 <p className="text-muted-foreground">
-                  The most common mistake. Jobs almost always take longer than expected. Old buildings have surprises. 
-                  Customers ask questions. Parts don't fit perfectly. Add 20% buffer time to every estimate. You can 
-                  always finish early and look like a hero.
+                  Measure carefully and always add a 10% waste factor for cuts, errors, and complex roof lines. Running short on 
+                  materials mid-job costs time and money. Better to have a small overage than to stop work for a material run.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Forgetting Small Materials</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Forgetting Tear-Off and Disposal Costs</h3>
                 <p className="text-muted-foreground">
-                  Those "little" items add up fast: hangers, straps, screws, sealant, flux, sandpaper, rags. Track 
-                  everything you use on jobs for a month, then create a standard "consumables" line item at $25-75 per 
-                  job depending on scope.
+                  This is the #1 mistake new roofers make. Tear-off and disposal can represent 20-30% of the total job cost. 
+                  Always include dumpster rental, labor, and dump fees as a separate line item. Never absorb these costs—they're 
+                  significant.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Not Accounting for Unexpected Issues</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Not Accounting for Deck Repairs or Rot</h3>
                 <p className="text-muted-foreground">
-                  Old plumbing always has surprises—corroded fittings, non-standard pipe sizes, hidden leaks. Include 
-                  language in your estimate about potential additional costs and build in contingency pricing. Better 
-                  yet, offer a "not to exceed" price that gives you cushion.
+                  You can't see the deck until tear-off, but address it proactively. Include language about potential deck repairs 
+                  with per-sheet pricing. Homeowners understand that rot is possible—transparent communication prevents disputes when 
+                  you discover issues.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Missing Permits</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Missing Flashing and Accessories</h3>
                 <p className="text-muted-foreground">
-                  Forgetting permits is both unprofessional and illegal. It puts your license at risk and can create 
-                  massive headaches if discovered during home sales. Always check permit requirements and include them 
-                  in your estimate.
+                  Don't forget to include all flashing (step flashing, counter flashing, valley flashing), pipe boots, ridge vents, 
+                  and other accessories. These "small" items add up fast and are critical for a watertight installation.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Poor Communication</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Underpricing Steep or Complex Roofs</h3>
                 <p className="text-muted-foreground">
-                  Vague estimates lead to disputes. "Approximately $500" isn't helpful. Provide specific breakdowns. 
-                  Explain what's included and what's not. Set clear payment terms. Good communication prevents 99% of 
-                  customer complaints.
+                  Steep pitch, multiple valleys, dormers, and turrets slow down production and increase difficulty. Don't price a 
+                  complex 8/12 pitch roof the same as a simple 4/12 ranch. Factor in the extra time, safety equipment, and 
+                  difficulty honestly.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Poor Communication About Potential Hidden Issues</h3>
+                <p className="text-muted-foreground">
+                  Vague estimates lead to disputes. Be explicit: "Price assumes standard deck condition. Rot or damage will be 
+                  billed separately at $X per sheet." Set clear expectations about what's included and what's extra. Good 
+                  communication prevents 99% of customer complaints.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Not Documenting Existing Roof Conditions with Photos</h3>
+                <p className="text-muted-foreground">
+                  Always take photos during inspection: existing damage, number of layers, deck condition visible from attic. 
+                  Photos protect you if disputes arise and help justify your pricing when you discover issues during tear-off.
                 </p>
               </div>
             </div>
@@ -295,48 +338,70 @@ const EstimateGuide = () => {
           {/* Best Practices */}
           <section className="mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 mt-8">
-              Best Practices for Professional Estimates
+              Best Practices for Professional Roofing Estimates
             </h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Use Professional Software</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Use Professional Estimate Software (Not Word/Excel)</h3>
                 <p className="text-muted-foreground">
-                  Stop using Word documents or handwritten notes. Professional estimate software looks better, prevents 
-                  math errors, and saves time. Digital estimates can be generated and sent in minutes instead of hours.
+                  Stop using Word documents or handwritten notes. Professional roofing estimate software looks better, prevents 
+                  calculation errors, and saves massive time. Digital estimates can be generated and emailed in under a minute 
+                  instead of 30+ minutes of manual work.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Provide Detailed Breakdowns</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Provide Detailed, Itemized Breakdowns by Squares</h3>
                 <p className="text-muted-foreground">
-                  Customers appreciate transparency. Break down labor, materials, permits, and other costs separately. 
-                  Detailed estimates build trust and make it easier to justify your pricing when competitors undercut you.
+                  Homeowners appreciate transparency. Break down costs by squares: materials per square, labor per square, tear-off 
+                  per square, permits, and other line items. Detailed estimates build trust and make it easier to justify your 
+                  pricing when competitors undercut you with vague bids.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Include Clear Payment Terms</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Include Clear Payment Terms (Deposit, Milestones, Final)</h3>
                 <p className="text-muted-foreground">
-                  Specify when payment is due—deposit upfront, progress payments for large jobs, final payment on 
-                  completion. State accepted payment methods. Include late payment terms. Clear terms prevent payment 
-                  disputes.
+                  Specify payment terms clearly: deposit upfront (typically 25-50%), progress payment when materials arrive, and 
+                  final payment upon completion and inspection. State accepted payment methods. Include late payment terms. Clear 
+                  terms prevent payment disputes and protect your cash flow.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Set Realistic Timelines</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Set Realistic Completion Timelines (Weather Dependent)</h3>
                 <p className="text-muted-foreground">
-                  Under-promise and over-deliver. If you think a job takes 3 days, quote 4-5 days. Finishing early 
-                  makes customers happy. Running late creates complaints, even if the work is perfect.
+                  Under-promise and over-deliver. If you think a roof takes 2 days in perfect weather, quote 3-4 days accounting 
+                  for rain delays. Roofing is weather-dependent—homeowners understand this. Finishing early makes customers happy. 
+                  Running late creates complaints.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Make It Look Professional</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Document Roof Conditions with Photos</h3>
                 <p className="text-muted-foreground">
-                  Your estimate is a sales document. Use your logo, consistent formatting, proper spelling and grammar. 
-                  PDF format looks more professional than Word docs. A polished estimate suggests you do polished work.
+                  Take photos during your inspection: existing damage, layers, attic moisture, flashing condition. Include a 
+                  summary in your estimate. Photos protect you from liability, help justify pricing, and demonstrate your 
+                  thoroughness and professionalism.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Professional Presentation Builds Trust and Justifies Pricing</h3>
+                <p className="text-muted-foreground">
+                  Your estimate is a sales document. Use your logo, consistent formatting, proper spelling and grammar, and PDF 
+                  format. A polished estimate suggests you do polished work. Include your license number, insurance information, 
+                  and manufacturer certifications to build credibility.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Include License, Insurance, and Manufacturer Certifications</h3>
+                <p className="text-muted-foreground">
+                  Display your contractor's license number, liability insurance, workers' comp coverage, and any manufacturer 
+                  certifications (GAF Master Elite, CertainTeed SELECT ShingleMaster, etc.). This differentiates you from unlicensed 
+                  competitors and justifies premium pricing.
                 </p>
               </div>
             </div>
@@ -345,9 +410,10 @@ const EstimateGuide = () => {
           {/* Conclusion */}
           <section className="mb-10">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Creating professional plumbing estimates doesn't have to be complicated. Focus on including all costs, 
-              pricing for profit, communicating clearly, and presenting professionally. The time you invest in better 
-              estimates pays off with higher close rates, fewer disputes, and better profitability.
+              Creating professional roofing estimates doesn't have to be complicated. Focus on including all costs (especially 
+              tear-off and disposal), pricing per square accurately with pitch multipliers, communicating clearly about potential 
+              deck repairs, and presenting everything professionally. The time you invest in better estimates pays off with higher 
+              close rates, fewer disputes, and better profitability on every job.
             </p>
           </section>
         </div>

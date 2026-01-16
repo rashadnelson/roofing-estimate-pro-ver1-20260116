@@ -127,7 +127,7 @@ const PricingSection = () => {
           </p>
           <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-[#1A1A1A]">
             Simple, transparent pricing.
-            <span className="block text-[#C41E3A]">No surprises.</span>
+            <span className="block text-[#DC2626]">No surprises.</span>
           </h2>
           <p className="mt-4 text-lg text-[#1A1A1A]/70">
             Choose the plan that works for your business. Upgrade or downgrade anytime.
@@ -145,14 +145,14 @@ const PricingSection = () => {
                 key={tier.name}
                 className={`relative rounded-2xl p-8 flex flex-col ${
                   tier.highlighted
-                    ? "border-2 border-[#C41E3A] bg-white shadow-xl"
+                    ? "border-2 border-[#DC2626] bg-white shadow-xl"
                     : "border border-[#1A1A1A]/10 bg-white shadow-sm"
                 }`}
               >
                 {/* Badge */}
                 {tier.badge && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-[#C41E3A] px-4 py-1.5 text-sm font-bold text-white">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-[#DC2626] px-4 py-1.5 text-sm font-bold text-white">
                       {tier.badge}
                     </span>
                   </div>
@@ -171,7 +171,7 @@ const PricingSection = () => {
                     )}
                   </div>
                   {tier.monthlyEquivalent && (
-                    <p className="mt-1 text-sm text-[#C41E3A] font-medium">
+                    <p className="mt-1 text-sm text-[#DC2626] font-medium">
                       {tier.monthlyEquivalent}
                     </p>
                   )}
@@ -187,7 +187,7 @@ const PricingSection = () => {
                   {tier.features.map((feature) => (
                     <li key={feature.name} className="flex items-center gap-3">
                       {feature.included ? (
-                        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#C41E3A]/10 text-[#C41E3A] flex-shrink-0">
+                        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#DC2626]/10 text-[#DC2626] flex-shrink-0">
                           <Check className="h-3 w-3" />
                         </div>
                       ) : (

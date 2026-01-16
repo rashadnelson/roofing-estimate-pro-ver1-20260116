@@ -29,7 +29,7 @@ const Index = () => {
   return (
     <>
       <SEO 
-        canonical="https://plumbproestimate.dev"
+        canonical="https://roofingestimatepro.dev"
       />
       <div className="min-h-screen flex flex-col">
       <Header />

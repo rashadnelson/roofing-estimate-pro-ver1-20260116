@@ -2,21 +2,21 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Mike Rodriguez",
-    role: "Owner, Rodriguez Plumbing",
-    content: "I've been using PlumbPro Estimate for 3 months now. What used to take me 15 minutes now takes under a minute. My clients love the professional PDFs, and I've closed more jobs because I look more credible.",
+    name: "Tom Jenkins",
+    role: "Roofing Contractor, Atlanta, GA",
+    content: "Professional estimates help me close more residential and commercial roofing jobs. This tool paid for itself after the first estimate.",
     rating: 5,
   },
   {
-    name: "Sarah Chen",
-    role: "Independent Contractor",
-    content: "The best part? No more scribbled notes on the back of receipts. Everything is clean, professional, and ready to email. Worth every penny.",
+    name: "Sarah Martinez",
+    role: "Owner, Martinez Roofing",
+    content: "The best part? No more scribbled notes. Everything is itemized by square, tear-off included, and ready to email. My close rate went up immediately.",
     rating: 5,
   },
   {
     name: "James Thompson",
-    role: "Thompson & Sons Plumbing",
-    content: "We tried other estimate tools, but they were too complicated. PlumbPro Estimate is simple, fast, and gets the job done. Our team uses it on every job site.",
+    role: "Thompson Roofing Services",
+    content: "We tried other tools, but they were too complicated or too expensive. Roofing Estimate Pro is simple, fast, and gets the job done. Our crew uses it on every site inspection.",
     rating: 5,
   },
 ];
@@ -31,10 +31,10 @@ const TestimonialsSection = () => {
             Testimonials
           </p>
           <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-[#1A1A1A]">
-            Trusted by plumbing professionals
+            Trusted by roofing professionals
           </h2>
           <p className="mt-4 text-lg text-[#1A1A1A]/70">
-            See what plumbers are saying about PlumbPro Estimate
+            See what roofers are saying about Roofing Estimate Pro
           </p>
         </div>
 
@@ -43,18 +43,18 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <article
               key={testimonial.name}
-              className="relative rounded-xl border border-[#1A1A1A]/10 bg-white/80 p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#C41E3A]/20"
+              className="relative rounded-xl border border-[#1A1A1A]/10 bg-white/80 p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#DC2626]/20"
               role="listitem"
             >
               {/* Quote Icon */}
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#C41E3A]/10 text-[#C41E3A]" aria-hidden="true">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#DC2626]/10 text-[#DC2626]" aria-hidden="true">
                 <Quote className="h-5 w-5" />
               </div>
 
               {/* Rating */}
               <div className="mb-4 flex gap-1" aria-label={`${testimonial.rating} out of 5 stars`}>
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-[#C41E3A] text-[#C41E3A]" />
+                  <Star key={i} className="h-4 w-4 fill-[#DC2626] text-[#DC2626]" />
                 ))}
               </div>
 

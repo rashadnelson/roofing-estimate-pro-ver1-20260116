@@ -30,8 +30,8 @@ export function UpgradePromptDialog({
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <div className="flex items-center gap-3 mb-2">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#C41E3A]/10">
-              <AlertCircle className="h-6 w-6 text-[#C41E3A]" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DC2626]/10">
+              <AlertCircle className="h-6 w-6 text-[#DC2626]" />
             </div>
             <DialogTitle className="text-2xl">Monthly Limit Reached</DialogTitle>
           </div>
@@ -46,13 +46,13 @@ export function UpgradePromptDialog({
           <div className="mb-6 p-4 rounded-lg bg-muted">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium">This Month's Usage</span>
-              <span className="text-sm font-bold text-[#C41E3A]">
+              <span className="text-sm font-bold text-[#DC2626]">
                 {currentUsage} / {limit}
               </span>
             </div>
             <div className="h-2 bg-background rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#C41E3A] transition-all"
+                className="h-full bg-[#DC2626] transition-all"
                 style={{ width: "100%" }}
               />
             </div>
@@ -61,7 +61,7 @@ export function UpgradePromptDialog({
           {/* Upgrade Benefits */}
           <div className="space-y-3">
             <h4 className="font-semibold flex items-center gap-2">
-              <Zap className="h-4 w-4 text-[#C41E3A]" />
+              <Zap className="h-4 w-4 text-[#DC2626]" />
               Unlock with Monthly or Annual Plan:
             </h4>
             <ul className="space-y-2">
@@ -95,7 +95,7 @@ export function UpgradePromptDialog({
           </Button>
           <Button
             asChild
-            className="w-full sm:w-auto bg-gradient-to-r from-[#C41E3A] to-[#A01828] hover:from-[#A01828] hover:to-[#8B1523]"
+            className="w-full sm:w-auto bg-gradient-to-r from-[#DC2626] to-[#B91C1C] hover:from-[#B91C1C] hover:to-[#991B1B]"
           >
             <Link to="/pricing">
               <Zap className="h-4 w-4 mr-2" />

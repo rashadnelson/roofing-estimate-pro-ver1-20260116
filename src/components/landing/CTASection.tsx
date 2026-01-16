@@ -11,19 +11,19 @@ const CTASection = () => {
             Ready to look like a pro?
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-xl mx-auto">
-            Join hundreds of plumbers who send professional estimates in under a minute. 
+            Join hundreds of roofers who send professional estimates in under a minute. 
             Your clients will notice the difference.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="xl" className="group min-h-[44px] px-8 py-4" asChild>
               <Link to="/signup">
-                Start for $149/year
+                Get Started Free
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
           <p className="mt-6 text-sm text-primary-foreground/60">
-            No credit card required to explore. Pay when you're ready.
+            Try free (3 estimates/month). $19/month or $149/year for unlimited.
           </p>
         </div>
       </div>

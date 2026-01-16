@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Background rounded square - PlumbPro dark background -->
+  <!-- Background rounded square - Roofing Estimate Pro dark background -->
   <rect width="32" height="32" rx="6" fill="#1A1A1A"/>
   
-  <!-- Stylized wrench icon in PlumbPro crimson -->
+  <!-- Stylized house/roof icon in Roofing Estimate Pro red -->
   <path 
-    fill="#C41E3A" 
-    d="M22.4 9.6c-1.2-1.2-2.9-1.6-4.4-1.2l-1.2 1.2 4.4 4.4 1.2-1.2c.4-1.5 0-3.2-1.2-4.4l.6.6-.6-.6zM15.4 11l-6.8 6.8c-.4.4-.4 1 0 1.4l2.8 2.8c.4.4 1 .4 1.4 0l6.8-6.8-4.2-4.2zm-4.2 9.8l-1.4-1.4 5.6-5.6 1.4 1.4-5.6 5.6z"
+    fill="#DC2626" 
+    d="M16 6L4 14.5V26h24V14.5L16 6zm0 3.2l8 5.6V24H8V14.8l8-5.6z"
   />
+  <rect x="10" y="18" width="5" height="6" fill="#DC2626"/>
+  <rect x="17" y="16" width="4" height="4" fill="#DC2626"/>
 </svg>

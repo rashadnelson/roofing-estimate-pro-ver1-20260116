@@ -15,22 +15,22 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "How to Create Plumbing Estimates: Complete Guide for Plumbers [2025]",
+    title: "How to Create Roofing Estimates: Complete Guide for Roofers [2025]",
     slug: "estimate-guide",
-    excerpt: "Learn how to create professional plumbing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
-    readTime: "8 min read",
+    excerpt: "Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
+    readTime: "10 min read",
   },
   {
-    title: "Plumbing Pricing Guide: How Much to Charge for Plumbing Jobs [2025]",
+    title: "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]",
     slug: "pricing-guide",
-    excerpt: "Complete pricing guide for plumbers. Learn how much to charge for common plumbing jobs, calculate your costs, and maximize profitability.",
-    readTime: "7 min read",
+    excerpt: "Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability.",
+    readTime: "12 min read",
   },
   {
-    title: "Best Plumbing Estimate Templates: Free vs Paid Options [2025]",
+    title: "Best Roofing Estimate Templates: Free vs Paid Options [2025]",
     slug: "template-comparison",
-    excerpt: "Compare free plumbing estimate templates, paid options, and software solutions. Learn which option is best for your plumbing business.",
-    readTime: "6 min read",
+    excerpt: "Compare free roofing estimate templates, paid options, and software solutions. Learn which option is best for your roofing business.",
+    readTime: "9 min read",
   },
 ];
 
@@ -42,17 +42,17 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Plumbing Guides & Resources | PlumbPro Estimate</title>
+        <title>Roofing Guides & Resources | Roofing Estimate Pro</title>
         <meta 
           name="description" 
-          content="Free guides for plumbers: estimate creation, pricing strategies, and template comparisons. Learn how to win more plumbing jobs." 
+          content="Free guides for roofers: estimate creation, pricing strategies, and template comparisons. Learn how to win more roofing jobs." 
         />
-        <meta property="og:title" content="Plumbing Guides & Resources | PlumbPro Estimate" />
+        <meta property="og:title" content="Roofing Guides & Resources | Roofing Estimate Pro" />
         <meta 
           property="og:description" 
-          content="Free guides for plumbers: estimate creation, pricing strategies, and template comparisons. Learn how to win more plumbing jobs." 
+          content="Free guides for roofers: estimate creation, pricing strategies, and template comparisons. Learn how to win more roofing jobs." 
         />
-        <link rel="canonical" href="https://plumbproestimate.dev/blog" />
+        <link rel="canonical" href="https://roofingestimatepro.dev/blog" />
       </Helmet>
 
       <div className="min-h-screen flex flex-col bg-background">
@@ -63,10 +63,10 @@ const Blog = () => {
             {/* Hero Section */}
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h1 className="font-display text-4xl md:text-5xl font-extrabold tracking-tight text-foreground mb-6">
-                Plumbing Business Resources & Guides
+                Roofing Business Resources & Guides
               </h1>
               <p className="text-xl text-muted-foreground">
-                Expert guides to help you grow your plumbing business, price jobs correctly, and win more customers.
+                Expert guides to help you grow your roofing business, price jobs correctly, and win more customers.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ const Blog = () => {
                 Ready to streamline your estimate process?
               </h2>
               <p className="text-primary-foreground/80 text-lg mb-6">
-                Create professional plumbing estimates in 60 seconds with PlumbPro.
+                Create professional roofing estimates in 60 seconds with Roofing Estimate Pro.
               </p>
               <Button variant="hero" size="lg" className="group" asChild>
                 <Link to="/">

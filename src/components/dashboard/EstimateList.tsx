@@ -146,7 +146,7 @@ export default function EstimateList({
     return (
       <Card className="border-white/10 bg-[#242424]">
         <CardContent className="flex items-center justify-center py-12">
-          <Loader2 className="h-8 w-8 animate-spin text-[#C41E3A]" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#DC2626]" />
         </CardContent>
       </Card>
     );
@@ -224,7 +224,7 @@ export default function EstimateList({
                 placeholder="Search by title, client name, phone, or address..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                className="pl-10 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
               />
             </div>
           </div>
@@ -267,7 +267,7 @@ export default function EstimateList({
                       <TableCell className="font-medium text-white">{estimate.title}</TableCell>
                       <TableCell className="text-white/80">{estimate.clientName}</TableCell>
                       <TableCell className="hidden sm:table-cell text-white/60">{estimate.clientPhone || "-"}</TableCell>
-                      <TableCell className="font-semibold text-[#C41E3A]">{formatCurrency(estimate.total)}</TableCell>
+                      <TableCell className="font-semibold text-[#DC2626]">{formatCurrency(estimate.total)}</TableCell>
                       <TableCell className="hidden md:table-cell text-white/60">
                         {new Date(estimate.createdAt).toLocaleDateString()}
                       </TableCell>

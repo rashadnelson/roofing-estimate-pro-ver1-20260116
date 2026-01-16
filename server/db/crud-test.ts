@@ -91,7 +91,7 @@ async function testCRUD() {
       .insert(settings)
       .values({
         userId: testUserId,
-        companyName: "Test Plumbing Co",
+        companyName: "Test Roofing Co",
         companyLogo: "https://example.com/logo.png",
       })
       .returning();
@@ -117,12 +117,12 @@ async function testCRUD() {
     const [updatedSettings] = await db
       .update(settings)
       .set({
-        companyName: "Updated Plumbing Co",
+        companyName: "Updated Roofing Co",
       })
       .where(eq(settings.userId, testUserId))
       .returning();
     
-    if (updatedSettings && updatedSettings.companyName === "Updated Plumbing Co") {
+    if (updatedSettings && updatedSettings.companyName === "Updated Roofing Co") {
       console.log("✅ Updated settings successfully");
       console.log(`   New company name: ${updatedSettings.companyName}`);
     } else {

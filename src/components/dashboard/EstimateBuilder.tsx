@@ -312,8 +312,8 @@ export default function EstimateBuilder({
     
     // Footer
     lines.push("─".repeat(40));
-    lines.push("Created with PlumbPro Estimate");
-    lines.push("Visit: plumbproestimate.dev");
+    lines.push("Created with Roofing Estimate Pro");
+    lines.push("Visit: roofingestimatepro.dev");
     
     return lines.join("\n");
   };
@@ -469,7 +469,7 @@ export default function EstimateBuilder({
           <div className="flex items-center justify-between">
             <div>
               <CardTitle className="text-white flex items-center gap-2">
-                <Calculator className="h-5 w-5 text-[#C41E3A]" />
+                <Calculator className="h-5 w-5 text-[#DC2626]" />
                 Estimate Builder
               </CardTitle>
               <CardDescription className="text-white/60">
@@ -527,7 +527,7 @@ export default function EstimateBuilder({
               >
                 <Save className="h-4 w-4 mr-2" />
                 Save Template
-                <span className="ml-2 text-xs bg-[#C41E3A] text-white px-1.5 py-0.5 rounded">
+                <span className="ml-2 text-xs bg-[#DC2626] text-white px-1.5 py-0.5 rounded">
                   PRO
                 </span>
               </Button>
@@ -551,7 +551,7 @@ export default function EstimateBuilder({
                 placeholder="0.00"
                 value={inputs.equipmentCost}
                 onChange={(e) => handleInputChange("equipmentCost", e.target.value)}
-                className={`pl-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.equipmentCost ? "border-red-500" : ""}`}
+                className={`pl-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.equipmentCost ? "border-red-500" : ""}`}
               />
             </div>
             {errors.equipmentCost && (
@@ -576,13 +576,13 @@ export default function EstimateBuilder({
                 placeholder="0.00"
                 value={inputs.materialsCost}
                 onChange={(e) => handleInputChange("materialsCost", e.target.value)}
-                className={`pl-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.materialsCost ? "border-red-500" : ""}`}
+                className={`pl-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.materialsCost ? "border-red-500" : ""}`}
               />
             </div>
             {errors.materialsCost && (
               <p className="text-xs text-red-400">{errors.materialsCost}</p>
             )}
-            <p className="text-xs text-white/40">Pipes, fittings, fixtures, and supplies</p>
+            <p className="text-xs text-white/40">Shingles, underlayment, flashing, and supplies</p>
           </div>
 
           {/* Labor Hours */}
@@ -599,7 +599,7 @@ export default function EstimateBuilder({
               placeholder="0"
               value={inputs.laborHours}
               onChange={(e) => handleInputChange("laborHours", e.target.value)}
-              className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.laborHours ? "border-red-500" : ""}`}
+              className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.laborHours ? "border-red-500" : ""}`}
             />
             {errors.laborHours && (
               <p className="text-xs text-red-400">{errors.laborHours}</p>
@@ -623,7 +623,7 @@ export default function EstimateBuilder({
                 placeholder="0.00"
                 value={inputs.laborRate}
                 onChange={(e) => handleInputChange("laborRate", e.target.value)}
-                className={`pl-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.laborRate ? "border-red-500" : ""}`}
+                className={`pl-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.laborRate ? "border-red-500" : ""}`}
               />
             </div>
             {errors.laborRate && (
@@ -648,7 +648,7 @@ export default function EstimateBuilder({
                 placeholder="0"
                 value={inputs.discountPercent}
                 onChange={(e) => handleInputChange("discountPercent", e.target.value)}
-                className={`pr-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.discountPercent ? "border-red-500" : ""}`}
+                className={`pr-9 bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.discountPercent ? "border-red-500" : ""}`}
               />
               <Percent className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
             </div>
@@ -675,7 +675,7 @@ export default function EstimateBuilder({
               variant="outline" 
               className={`capitalize ${
                 userTier === "annual" 
-                  ? "border-[#C41E3A] text-[#C41E3A]" 
+                  ? "border-[#DC2626] text-[#DC2626]" 
                   : userTier === "monthly"
                   ? "border-blue-500 text-blue-500"
                   : "border-white/40 text-white/60"
@@ -697,7 +697,7 @@ export default function EstimateBuilder({
               <div className="mt-2 h-1.5 bg-white/10 rounded-full overflow-hidden">
                 <div 
                   className={`h-full rounded-full transition-all ${
-                    estimatesUsed >= estimatesLimit ? "bg-red-500" : "bg-[#C41E3A]"
+                    estimatesUsed >= estimatesLimit ? "bg-red-500" : "bg-[#DC2626]"
                   }`}
                   style={{ width: `${Math.min(100, (estimatesUsed / estimatesLimit) * 100)}%` }}
                 />
@@ -719,12 +719,12 @@ export default function EstimateBuilder({
         <CardContent className="space-y-4">
           {/* Calculation Breakdown */}
           <div className={`space-y-3 p-4 rounded-lg bg-[#1A1A1A] border border-white/10 transition-all duration-200 ${
-            isCalculating ? "border-[#C41E3A]/30" : ""
+            isCalculating ? "border-[#DC2626]/30" : ""
           }`}>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Equipment Cost</span>
               <span className={`text-white transition-all duration-200 ${
-                isCalculating && parseValue(inputs.equipmentCost) > 0 ? "text-[#C41E3A]" : ""
+                isCalculating && parseValue(inputs.equipmentCost) > 0 ? "text-[#DC2626]" : ""
               }`}>
                 {formatCurrency(parseValue(inputs.equipmentCost))}
               </span>
@@ -732,7 +732,7 @@ export default function EstimateBuilder({
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Materials Cost</span>
               <span className={`text-white transition-all duration-200 ${
-                isCalculating && parseValue(inputs.materialsCost) > 0 ? "text-[#C41E3A]" : ""
+                isCalculating && parseValue(inputs.materialsCost) > 0 ? "text-[#DC2626]" : ""
               }`}>
                 {formatCurrency(parseValue(inputs.materialsCost))}
               </span>
@@ -742,7 +742,7 @@ export default function EstimateBuilder({
                 Labor ({parseValue(inputs.laborHours)} hrs × {formatCurrency(parseValue(inputs.laborRate))}/hr)
               </span>
               <span className={`text-white transition-all duration-200 ${
-                isCalculating && results.laborTotal > 0 ? "text-[#C41E3A]" : ""
+                isCalculating && results.laborTotal > 0 ? "text-[#DC2626]" : ""
               }`}>
                 {formatCurrency(results.laborTotal)}
               </span>
@@ -751,7 +751,7 @@ export default function EstimateBuilder({
             <div className="flex justify-between text-sm font-medium">
               <span className="text-white">Subtotal</span>
               <span className={`text-white transition-all duration-200 ${
-                isCalculating ? "text-[#C41E3A]" : ""
+                isCalculating ? "text-[#DC2626]" : ""
               }`}>
                 {formatCurrency(results.subtotal)}
               </span>
@@ -769,12 +769,12 @@ export default function EstimateBuilder({
           </div>
 
           {/* Final Price */}
-          <div className={`p-4 rounded-lg bg-gradient-to-r from-[#C41E3A]/20 to-[#C41E3A]/10 border border-[#C41E3A]/30 transition-all duration-200 ${
-            isCalculating ? "ring-2 ring-[#C41E3A]/50 scale-[1.01]" : ""
+          <div className={`p-4 rounded-lg bg-gradient-to-r from-[#DC2626]/20 to-[#DC2626]/10 border border-[#DC2626]/30 transition-all duration-200 ${
+            isCalculating ? "ring-2 ring-[#DC2626]/50 scale-[1.01]" : ""
           }`}>
             <div className="flex justify-between items-center">
               <span className="text-white font-medium">Final Price</span>
-              <span className={`text-3xl font-bold text-[#C41E3A] transition-all duration-200 ${
+              <span className={`text-3xl font-bold text-[#DC2626] transition-all duration-200 ${
                 isCalculating ? "animate-pulse" : ""
               }`}>
                 {formatCurrency(results.finalPrice)}
@@ -847,7 +847,7 @@ export default function EstimateBuilder({
             <Button
               onClick={handleDownloadPDF}
               disabled={!hasInputs || results.finalPrice === 0 || isGenerating || incrementUsageMutation.isPending}
-              className="w-full bg-gradient-to-r from-[#C41E3A] to-[#A01828] hover:from-[#A01828] hover:to-[#8B1523] text-white font-medium transition-all duration-200 min-h-[44px]"
+              className="w-full bg-gradient-to-r from-[#DC2626] to-[#B91C1C] hover:from-[#B91C1C] hover:to-[#991B1B] text-white font-medium transition-all duration-200 min-h-[44px]"
             >
               {isGenerating || incrementUsageMutation.isPending ? (
                 <>

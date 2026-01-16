@@ -59,7 +59,7 @@ const Success = () => {
           </>
         ) : (
           <>
-            <Loader2 className="h-12 w-12 text-[#C41E3A] mx-auto animate-spin" />
+            <Loader2 className="h-12 w-12 text-[#DC2626] mx-auto animate-spin" />
             <div>
               <h1 className="text-xl font-semibold text-white">
                 {status === "activating" ? "Activating your subscription..." : "Processing payment..."}

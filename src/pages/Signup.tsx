@@ -179,7 +179,7 @@ const Signup = () => {
       <div className="min-h-screen flex flex-col bg-[#1A1A1A]">
         <Header />
         <main className="flex-1 flex items-center justify-center">
-          <Loader2 className="h-8 w-8 animate-spin text-[#C41E3A]" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#DC2626]" />
         </main>
         <Footer />
       </div>
@@ -194,9 +194,9 @@ const Signup = () => {
   return (
     <>
       <SEO 
-        title="Sign Up - PlumbPro Estimate"
-        description="Create your free PlumbPro Estimate account. Start generating professional plumbing estimates in under 60 seconds."
-        canonical="https://plumbproestimate.dev/signup"
+        title="Sign Up - Roofing Estimate Pro"
+        description="Create your free Roofing Estimate Pro account. Start generating professional roofing estimates in under 60 seconds."
+        canonical="https://roofingestimatepro.dev/signup"
       />
       <div className="min-h-screen flex flex-col bg-[#1A1A1A]">
         <Header />
@@ -220,14 +220,14 @@ const Signup = () => {
                       <FormControl>
                         <Input
                           id="companyName"
-                          placeholder="Your Plumbing Company"
+                          placeholder="Your Roofing Company"
                           {...field}
                           disabled={isLoading}
                           autoComplete="organization"
                           aria-required="true"
                           aria-invalid={!!form.formState.errors.companyName}
                           aria-describedby={form.formState.errors.companyName ? "companyName-error" : undefined}
-                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                         />
                       </FormControl>
                       <FormMessage id="companyName-error" />
@@ -251,7 +251,7 @@ const Signup = () => {
                           aria-required="true"
                           aria-invalid={!!form.formState.errors.email}
                           aria-describedby={form.formState.errors.email ? "email-error" : undefined}
-                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                         />
                       </FormControl>
                       <FormMessage id="email-error" />
@@ -275,7 +275,7 @@ const Signup = () => {
                           aria-required="true"
                           aria-invalid={!!form.formState.errors.password}
                           aria-describedby={form.formState.errors.password ? "password-error password-help" : "password-help"}
-                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                         />
                       </FormControl>
                       <FormMessage id="password-error" />
@@ -301,17 +301,17 @@ const Signup = () => {
           <CardFooter className="flex flex-col space-y-4">
             <div className="text-sm text-center text-white/70">
               Already have an account?{" "}
-              <Link to="/login" className="text-[#C41E3A] hover:underline font-medium">
+              <Link to="/login" className="text-[#DC2626] hover:underline font-medium">
                 Sign in
               </Link>
             </div>
             <p className="text-xs text-center text-white/50">
               By signing up, you agree to our{" "}
-              <Link to="/terms" className="text-[#C41E3A] hover:underline">
+              <Link to="/terms" className="text-[#DC2626] hover:underline">
                 Terms of Service
               </Link>{" "}
               and{" "}
-              <Link to="/privacy" className="text-[#C41E3A] hover:underline">
+              <Link to="/privacy" className="text-[#DC2626] hover:underline">
                 Privacy Policy
               </Link>
             </p>

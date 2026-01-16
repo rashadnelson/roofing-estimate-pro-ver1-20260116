@@ -202,8 +202,8 @@ export default function EstimateForm({
                   data-testid="estimate-title-input"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  placeholder="e.g., Kitchen Plumbing Repair"
-                  className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.title ? "border-red-500" : ""}`}
+                  placeholder="e.g., Roof Replacement - Smith Residence"
+                  className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.title ? "border-red-500" : ""}`}
                 />
                 {errors.title && <p className="text-sm text-red-400">{errors.title}</p>}
               </div>
@@ -218,7 +218,7 @@ export default function EstimateForm({
                   value={clientName}
                   onChange={(e) => setClientName(e.target.value)}
                   placeholder="John Doe"
-                  className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.clientName ? "border-red-500" : ""}`}
+                  className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.clientName ? "border-red-500" : ""}`}
                 />
                 {errors.clientName && <p className="text-sm text-red-400">{errors.clientName}</p>}
               </div>
@@ -230,7 +230,7 @@ export default function EstimateForm({
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
                   placeholder="(555) 123-4567"
-                  className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${errors.clientPhone ? "border-red-500" : ""}`}
+                  className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${errors.clientPhone ? "border-red-500" : ""}`}
                 />
                 {errors.clientPhone && <p className="text-sm text-red-400">{errors.clientPhone}</p>}
               </div>
@@ -244,7 +244,7 @@ export default function EstimateForm({
                   onChange={(e) => setClientAddress(e.target.value)}
                   placeholder="123 Main St, City, State ZIP"
                   rows={2}
-                  className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                  className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                 />
               </div>
             </div>
@@ -284,7 +284,7 @@ export default function EstimateForm({
                             value={item.description}
                             onChange={(e) => updateItem(index, "description", e.target.value)}
                             placeholder="Item description"
-                            className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${
+                            className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${
                               errors[`item-${index}-description`] ? "border-red-500" : ""
                             }`}
                           />
@@ -317,7 +317,7 @@ export default function EstimateForm({
                             data-testid={`line-item-${index}-quantity`}
                             value={item.quantity}
                             onChange={(e) => updateItem(index, "quantity", parseFloat(e.target.value) || 0)}
-                            className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${
+                            className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${
                               errors[`item-${index}-quantity`] ? "border-red-500" : ""
                             }`}
                           />
@@ -335,7 +335,7 @@ export default function EstimateForm({
                             data-testid={`line-item-${index}-unit-price`}
                             value={item.unitPrice}
                             onChange={(e) => updateItem(index, "unitPrice", parseFloat(e.target.value) || 0)}
-                            className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] ${
+                            className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] ${
                               errors[`item-${index}-unitPrice`] ? "border-red-500" : ""
                             }`}
                           />
@@ -382,7 +382,7 @@ export default function EstimateForm({
                     value={discountPercent}
                     onChange={(e) => setDiscountPercent(e.target.value)}
                     placeholder="0"
-                    className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A] pr-8 ${errors.discountPercent ? "border-red-500" : ""}`}
+                    className={`bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626] pr-8 ${errors.discountPercent ? "border-red-500" : ""}`}
                   />
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40">%</span>
                 </div>
@@ -405,7 +405,7 @@ export default function EstimateForm({
                 )}
                 <div className="flex items-center justify-end gap-4">
                   <span className="text-lg font-semibold text-white">Total:</span>
-                  <span className="text-2xl font-bold text-[#C41E3A]" data-testid="estimate-total">{formatCurrencyFromDollars(total)}</span>
+                  <span className="text-2xl font-bold text-[#DC2626]" data-testid="estimate-total">{formatCurrencyFromDollars(total)}</span>
                 </div>
               </div>
             </div>

@@ -20,7 +20,7 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="font-display text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
                 <p className="text-muted-foreground">
-                  By accessing or using PlumbPro Estimate, you agree to be bound by these Terms of Service. 
+                  By accessing or using Roofing Estimate Pro, you agree to be bound by these Terms of Service. 
                   If you do not agree to these terms, please do not use our service.
                 </p>
               </section>
@@ -28,7 +28,7 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="font-display text-2xl font-bold mb-4">2. Description of Service</h2>
                 <p className="text-muted-foreground">
-                  PlumbPro Estimate provides a web-based platform for creating, managing, and sending 
+                  Roofing Estimate Pro provides a web-based platform for creating, managing, and sending 
                   professional estimates. The service includes estimate creation tools, PDF generation, 
                   email delivery, and client management features.
                 </p>
@@ -37,10 +37,11 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="font-display text-2xl font-bold mb-4">3. Subscription and Payment</h2>
                 <p className="text-muted-foreground mb-4">
-                  Access to PlumbPro Estimate requires a paid subscription:
+                  Access to Roofing Estimate Pro requires a paid subscription:
                 </p>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Annual subscription fee: $149/year</li>
+                  <li>Monthly subscription: $19/month</li>
+                  <li>Annual subscription: $149/year (save 35%)</li>
                   <li>Payment is processed through Stripe</li>
                   <li>Access is granted immediately upon successful payment</li>
                   <li>Subscriptions auto-renew unless cancelled</li>
@@ -63,7 +64,7 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="font-display text-2xl font-bold mb-4">5. Intellectual Property</h2>
                 <p className="text-muted-foreground">
-                  All content, features, and functionality of PlumbPro Estimate are owned by us and are 
+                  All content, features, and functionality of Roofing Estimate Pro are owned by us and are 
                   protected by copyright, trademark, and other intellectual property laws. You retain 
                   ownership of any content you create using our service.
                 </p>
@@ -72,7 +73,7 @@ const Terms = () => {
               <section className="mb-8">
                 <h2 className="font-display text-2xl font-bold mb-4">6. Limitation of Liability</h2>
                 <p className="text-muted-foreground">
-                  PlumbPro Estimate is provided "as is" without warranties of any kind. We are not liable 
+                  Roofing Estimate Pro is provided "as is" without warranties of any kind. We are not liable 
                   for any indirect, incidental, special, or consequential damages arising from your use 
                   of the service.
                 </p>
@@ -99,8 +100,8 @@ const Terms = () => {
                 <h2 className="font-display text-2xl font-bold mb-4">9. Contact</h2>
                 <p className="text-muted-foreground">
                   For questions about these Terms of Service, contact us at:{" "}
-                  <a href="mailto:support@plumbproestimate.dev" className="text-accent hover:underline">
-                    support@plumbproestimate.dev
+                  <a href="mailto:support@roofingestimatepro.dev" className="text-accent hover:underline">
+                    support@roofingestimatepro.dev
                   </a>
                 </p>
               </section>

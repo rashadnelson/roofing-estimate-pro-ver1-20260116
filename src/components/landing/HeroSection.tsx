@@ -17,7 +17,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-accent animate-fade-in">
             <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-            Built for Plumbing Professionals
+            Built for Roofing Professionals
           </div>
 
           {/* Headline */}
@@ -28,19 +28,19 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="mt-6 text-lg text-primary-foreground/80 md:text-xl max-w-2xl mx-auto animate-slide-up animate-delay-100">
-            Create professional estimates that win jobs. No fluff, no monthly bills—just a tool that works as hard as you do.
+            Create professional roofing estimates in under a minute. No more messy paperwork or lost quotes—just sharp, branded PDFs your clients will trust.
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up animate-delay-200">
             <Button variant="hero" size="xl" className="group" asChild>
               <Link to="/signup">
-                Start for $149/year
+                Get Started Free
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#features">See How It Works</a>
+              <a href="#pricing">View Pricing</a>
             </Button>
           </div>
 

@@ -18,10 +18,10 @@ export default {
         display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // PlumbPro Brand Colors
-        plumbpro: {
-          crimson: '#C41E3A',
-          'crimson-dark': '#A01830',
+        // Roofing Estimate Pro Brand Colors
+        roofpro: {
+          red: '#DC2626',
+          'red-light': '#F87171',
           dark: '#1A1A1A',
           'dark-pattern': '#2A2A2A',
           cream: '#E8D5C4',

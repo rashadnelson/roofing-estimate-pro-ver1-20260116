@@ -74,7 +74,7 @@ export default function TemplateDropdown({
       >
         <Lock className="h-4 w-4 mr-2" />
         Templates
-        <span className="ml-2 text-xs bg-[#C41E3A] text-white px-1.5 py-0.5 rounded">
+        <span className="ml-2 text-xs bg-[#DC2626] text-white px-1.5 py-0.5 rounded">
           PRO
         </span>
       </Button>
@@ -123,7 +123,7 @@ export default function TemplateDropdown({
                 onClick={() => onLoad(template)}
               >
                 <div className="flex items-center gap-2 flex-1 min-w-0">
-                  <FileText className="h-4 w-4 text-[#C41E3A] shrink-0" />
+                  <FileText className="h-4 w-4 text-[#DC2626] shrink-0" />
                   <span className="truncate">{template.name}</span>
                 </div>
                 <Button

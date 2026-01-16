@@ -125,14 +125,14 @@ const DashboardContent = () => {
             <TabsList className="bg-[#242424] border border-white/10">
               <TabsTrigger 
                 value="builder" 
-                className="data-[state=active]:bg-[#C41E3A] data-[state=active]:text-white text-white/60"
+                className="data-[state=active]:bg-[#DC2626] data-[state=active]:text-white text-white/60"
               >
                 <Calculator className="h-4 w-4 mr-2" />
                 Quick Estimate
               </TabsTrigger>
               <TabsTrigger 
                 value="saved" 
-                className="data-[state=active]:bg-[#C41E3A] data-[state=active]:text-white text-white/60"
+                className="data-[state=active]:bg-[#DC2626] data-[state=active]:text-white text-white/60"
               >
                 <FileText className="h-4 w-4 mr-2" />
                 Saved Estimates

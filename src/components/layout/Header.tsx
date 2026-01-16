@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Wrench, LogOut, Settings } from "lucide-react";
+import { Home, LogOut, Settings } from "lucide-react";
 import { useSession, signOut } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { SubscriptionStatusBadge } from "@/components/subscription";
@@ -46,12 +46,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#1A1A1A]/95 backdrop-blur supports-[backdrop-filter]:bg-[#1A1A1A]/80">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group" aria-label="PlumbPro Estimate Home">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C41E3A] text-white transition-transform group-hover:scale-105" aria-hidden="true">
-            <Wrench className="h-5 w-5" />
+        <Link to="/" className="flex items-center gap-2 group" aria-label="Roofing Estimate Pro Home">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#DC2626] text-white transition-transform group-hover:scale-105" aria-hidden="true">
+            <Home className="h-5 w-5" />
           </div>
           <span className="font-display text-xl font-extrabold tracking-tight text-white">
-            PlumbPro<span className="text-[#C41E3A]">Estimate</span>
+            Roofing Estimate <span className="text-[#DC2626]">Pro</span>
           </span>
         </Link>
         

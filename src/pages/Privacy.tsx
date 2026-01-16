@@ -77,8 +77,8 @@ const Privacy = () => {
                 <h2 className="font-display text-2xl font-bold mb-4">6. Contact Us</h2>
                 <p className="text-muted-foreground">
                   If you have questions about this Privacy Policy, please contact us at:{" "}
-                  <a href="mailto:support@plumbproestimate.dev" className="text-accent hover:underline">
-                    support@plumbproestimate.dev
+                  <a href="mailto:support@roofingestimatepro.dev" className="text-accent hover:underline">
+                    support@roofingestimatepro.dev
                   </a>
                 </p>
               </section>

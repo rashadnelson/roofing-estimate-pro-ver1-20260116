@@ -90,7 +90,7 @@ const ForgotPassword = () => {
             <CardContent className="space-y-4">
               <div className="bg-[#1A1A1A] rounded-lg p-4 text-center border border-white/10">
                 <div className="flex items-center justify-center gap-2 text-sm font-medium text-white">
-                  <Mail className="h-4 w-4 text-[#C41E3A]" />
+                  <Mail className="h-4 w-4 text-[#DC2626]" />
                   {sentToEmail}
                 </div>
               </div>
@@ -104,7 +104,7 @@ const ForgotPassword = () => {
                     setIsEmailSent(false);
                     form.reset();
                   }}
-                  className="text-[#C41E3A] hover:underline font-medium"
+                  className="text-[#DC2626] hover:underline font-medium"
                 >
                   try again
                 </button>
@@ -157,7 +157,7 @@ const ForgotPassword = () => {
                           aria-required="true"
                           aria-invalid={!!form.formState.errors.email}
                           aria-describedby={form.formState.errors.email ? "email-error" : undefined}
-                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#C41E3A] focus:ring-[#C41E3A]"
+                          className="bg-[#1A1A1A] border-white/20 text-white placeholder:text-white/40 focus:border-[#DC2626] focus:ring-[#DC2626]"
                         />
                       </FormControl>
                       <FormMessage id="email-error" />

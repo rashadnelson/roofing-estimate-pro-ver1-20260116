@@ -24,8 +24,8 @@
     --muted: 0 0% 93%;
     --muted-foreground: 0 0% 45%;
 
-    /* PlumbPro crimson accent */
-    --accent: 349 74% 50%; /* #C41E3A in HSL */
+    /* Roofing Estimate Pro red accent */
+    --accent: 0 72% 51%; /* #DC2626 in HSL */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 4 74% 57%;
@@ -39,7 +39,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 349 74% 50%; /* PlumbPro crimson */
+    --ring: 0 72% 51%; /* Roofing Estimate Pro red */
 
     --radius: 0.5rem;
 
@@ -60,7 +60,7 @@
   }
 
   .dark {
-    /* PlumbPro dark background #1A1A1A */
+    /* Roofing Estimate Pro dark background #1A1A1A */
     --background: 0 0% 10%; /* #1A1A1A */
     --foreground: 0 0% 98%;
 
@@ -79,8 +79,8 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    /* PlumbPro crimson accent */
-    --accent: 349 74% 50%; /* #C41E3A in HSL */
+    /* Roofing Estimate Pro red accent */
+    --accent: 0 72% 51%; /* #DC2626 in HSL */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 4 74% 57%;
@@ -94,9 +94,9 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 349 74% 50%; /* PlumbPro crimson */
+    --ring: 0 72% 51%; /* Roofing Estimate Pro red */
 
-    --sidebar-background: 0 0% 10%; /* PlumbPro dark */
+    --sidebar-background: 0 0% 10%; /* Roofing dark */
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 0 0% 98%;
     --sidebar-primary-foreground: 0 0% 7%;
