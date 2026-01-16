@@ -7,7 +7,7 @@ import RelatedPosts from "@/components/blog/RelatedPosts";
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]",
+  "headline": "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2026]",
   "description": "Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability.",
   "image": "https://roofingestimatepro.dev/og-image.png",
   "author": {
@@ -23,8 +23,8 @@ const articleSchema = {
       "url": "https://roofingestimatepro.dev/favicon.svg"
     }
   },
-  "datePublished": "2025-01-01",
-  "dateModified": "2025-01-16",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-01-16",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://roofingestimatepro.dev/blog/pricing-guide"
@@ -34,12 +34,12 @@ const articleSchema = {
 const PricingGuide = () => {
   const relatedPosts = [
     {
-      title: "How to Create Roofing Estimates: Complete Guide for Roofers [2025]",
+      title: "How to Create Roofing Estimates: Complete Guide for Roofers [2026]",
       slug: "estimate-guide",
       excerpt: "Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
     },
     {
-      title: "Best Roofing Estimate Templates: Free vs Paid Options [2025]",
+      title: "Best Roofing Estimate Templates: Free vs Paid Options [2026]",
       slug: "template-comparison",
       excerpt: "Compare free roofing estimate templates, paid options, and software solutions. Learn which option is best for your roofing business.",
     },
@@ -48,12 +48,12 @@ const PricingGuide = () => {
   return (
     <>
       <Helmet>
-        <title>Roofing Pricing Guide: How Much to Charge [2025] | Roofing Estimate Pro</title>
+        <title>Roofing Pricing Guide: How Much to Charge [2026] | Roofing Estimate Pro</title>
         <meta 
           name="description" 
           content="Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability." 
         />
-        <meta property="og:title" content="Roofing Pricing Guide: How Much to Charge [2025] | Roofing Estimate Pro" />
+        <meta property="og:title" content="Roofing Pricing Guide: How Much to Charge [2026] | Roofing Estimate Pro" />
         <meta property="og:type" content="article" />
         <meta 
           property="og:description" 
@@ -70,12 +70,12 @@ const PricingGuide = () => {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground mb-4 leading-tight">
-            Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]
+            Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2026]
           </h1>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>12 min read</span>
             <span>•</span>
-            <span>Updated January 2025</span>
+            <span>Updated January 2026</span>
           </div>
         </header>
 

@@ -15,19 +15,19 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "How to Create Roofing Estimates: Complete Guide for Roofers [2025]",
+    title: "How to Create Roofing Estimates: Complete Guide for Roofers [2026]",
     slug: "estimate-guide",
     excerpt: "Learn how to create professional roofing estimates that win more jobs. Complete guide including pricing strategies, what to include, and common mistakes to avoid.",
     readTime: "10 min read",
   },
   {
-    title: "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2025]",
+    title: "Roofing Pricing Guide: How Much to Charge for Roofing Jobs [2026]",
     slug: "pricing-guide",
     excerpt: "Complete pricing guide for roofers. Learn how much to charge for common roofing jobs, calculate your costs, and maximize profitability.",
     readTime: "12 min read",
   },
   {
-    title: "Best Roofing Estimate Templates: Free vs Paid Options [2025]",
+    title: "Best Roofing Estimate Templates: Free vs Paid Options [2026]",
     slug: "template-comparison",
     excerpt: "Compare free roofing estimate templates, paid options, and software solutions. Learn which option is best for your roofing business.",
     readTime: "9 min read",
